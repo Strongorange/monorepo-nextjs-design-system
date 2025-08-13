@@ -77,7 +77,13 @@ var buttonVariants = (0, import_class_variance_authority.cva)(
   }
 );
 var Button = React.forwardRef(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({
+    className,
+    variant = "default",
+    size = "default",
+    asChild = false,
+    ...props
+  }, ref) => {
     const Comp = asChild ? import_react_slot.Slot : "button";
     return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
       Comp,
