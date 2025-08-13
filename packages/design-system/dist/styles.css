@@ -149,6 +149,9 @@
     --ds-ring: 221.2 83.2% 53.3%;
     --ds-radius: 0.5rem;
   }
+.box-border {
+    box-sizing: border-box;
+}
 .inline-flex {
     display: inline-flex;
 }
@@ -163,6 +166,11 @@
 }
 .w-9 {
     width: 2.25rem;
+}
+.appearance-none {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
 }
 .items-center {
     align-items: center;
@@ -220,6 +228,15 @@
 }
 .font-medium {
     font-weight: 500;
+}
+.normal-case {
+    text-transform: none;
+}
+.not-italic {
+    font-style: normal;
+}
+.tracking-normal {
+    letter-spacing: 0em;
 }
 .text-destructive-foreground {
     color: hsl(var(--ds-destructive-foreground));
