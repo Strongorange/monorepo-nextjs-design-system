@@ -1,15 +1,14 @@
-// Components
+// UI Components - 순수한 UI 컴포넌트만 export
 export { Button } from "./components/ui/button";
-export type { ButtonProps } from "./components/ui/button";
-
-// Legacy provider (kept for backward compatibility)
-export { DesignSystemProvider } from "./components/theme/design-system-provider";
 export type {
-  DesignSystemTheme,
-  DesignSystemProviderProps,
-} from "./components/theme/design-system-provider";
+  ButtonProps,
+  ButtonVariant,
+  ButtonSize,
+} from "./components/ui/button";
 
-// New style isolation system
+// Utils - 필수 유틸리티만
+export { cn } from "./lib/utils";
+
 export {
   StyleIsolationProvider,
   useStyleIsolation,
@@ -18,27 +17,3 @@ export type {
   StyleIsolationProviderProps,
   StyleIsolationTheme,
 } from "./components/theme/style-isolation-provider";
-
-export {
-  withStyleIsolation,
-  useStyleIsolationSafe,
-  EnsureStyleIsolation,
-} from "./components/theme/with-style-isolation";
-
-export { DesignSystemRoot } from "./components/theme/design-system-root";
-export type { DesignSystemRootProps } from "./components/theme/design-system-root";
-
-// Hooks
-export {
-  useDesignSystemTheme,
-  useNextThemesIntegration,
-} from "./hooks/use-next-themes-integration";
-
-// Utils
-export { cn } from "./lib/utils";
-export {
-  injectStyles,
-  removeStyles,
-  generateIsolationCSS,
-  useStyleInjection,
-} from "./lib/style-injection";

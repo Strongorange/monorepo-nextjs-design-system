@@ -1,0 +1,30 @@
+/* 공격적인 CSS로 스타일 격리 테스트 */
+
+/* 모든 버튼을 빨간색으로 만들려고 시도 */
+button {
+  background-color: red !important;
+  color: white !important;
+  border: 2px solid black !important;
+  border-radius: 0 !important;
+  padding: 20px !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+/* 모든 요소의 margin을 추가 */
+* {
+  margin: 5px !important;
+}
+
+/* 모든 div를 파란색 테두리로 */
+div {
+  border: 1px solid blue !important;
+}
+
+/* 모든 텍스트를 크게 */
+h1,
+h2,
+p {
+  font-size: 24px !important;
+  color: purple !important;
+}

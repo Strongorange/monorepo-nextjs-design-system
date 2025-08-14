@@ -32,20 +32,9 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var index_exports = {};
 __export(index_exports, {
   Button: () => Button,
-  DesignSystemProvider: () => DesignSystemProvider,
-  DesignSystemRoot: () => DesignSystemRoot,
-  EnsureStyleIsolation: () => EnsureStyleIsolation,
   StyleIsolationProvider: () => StyleIsolationProvider,
   cn: () => cn,
-  generateIsolationCSS: () => generateIsolationCSS,
-  injectStyles: () => injectStyles,
-  removeStyles: () => removeStyles,
-  useDesignSystemTheme: () => useDesignSystemTheme,
-  useNextThemesIntegration: () => useNextThemesIntegration,
-  useStyleInjection: () => useStyleInjection,
-  useStyleIsolation: () => useStyleIsolation,
-  useStyleIsolationSafe: () => useStyleIsolationSafe,
-  withStyleIsolation: () => withStyleIsolation
+  useStyleIsolation: () => useStyleIsolation
 });
 module.exports = __toCommonJS(index_exports);
 
@@ -101,6 +90,8 @@ var Button = React.forwardRef(
       Comp,
       {
         className: cn(
+          "ds-ui ds-ui ds-ui ds-ui ds-ui",
+          // 매우 높은 특이성을 위해 5번 반복
           "ds-Button",
           buttonVariants({ variant, size, className })
         ),
@@ -112,29 +103,10 @@ var Button = React.forwardRef(
 );
 Button.displayName = "Button";
 
-// src/components/theme/design-system-provider.tsx
+// src/components/theme/style-isolation-provider.tsx
 var React2 = __toESM(require("react"));
 var import_react_slot2 = require("@radix-ui/react-slot");
 var import_jsx_runtime2 = require("react/jsx-runtime");
-var DesignSystemProvider = React2.forwardRef(({ asChild = false, theme = "inherit", className, ...props }, ref) => {
-  const Comp = asChild ? import_react_slot2.Slot : "div";
-  const darkClassName = theme === "dark" ? "dark" : theme === "light" ? void 0 : void 0;
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
-    Comp,
-    {
-      "data-ds-theme": true,
-      className: cn(darkClassName, className),
-      ref,
-      ...props
-    }
-  );
-});
-DesignSystemProvider.displayName = "DesignSystemProvider";
-
-// src/components/theme/style-isolation-provider.tsx
-var React3 = __toESM(require("react"));
-var import_react_slot3 = require("@radix-ui/react-slot");
-var import_jsx_runtime3 = require("react/jsx-runtime");
 var CSS_VARIABLES = {
   light: {
     "--ds-background": "#fefefe",
@@ -185,9 +157,9 @@ var CSS_VARIABLES = {
     "--ds-radius": "0.5rem"
   }
 };
-var StyleIsolationContext = React3.createContext(null);
+var StyleIsolationContext = React2.createContext(null);
 function useStyleIsolation() {
-  const context = React3.useContext(StyleIsolationContext);
+  const context = React2.useContext(StyleIsolationContext);
   if (!context) {
     throw new Error(
       "useStyleIsolation must be used within a StyleIsolationProvider"
@@ -196,8 +168,8 @@ function useStyleIsolation() {
   return context;
 }
 function useCurrentTheme(providedTheme) {
-  const [currentTheme, setCurrentTheme] = React3.useState("light");
-  React3.useEffect(() => {
+  const [currentTheme, setCurrentTheme] = React2.useState("light");
+  React2.useEffect(() => {
     if (providedTheme) {
       setCurrentTheme(providedTheme);
       return;
@@ -225,7 +197,7 @@ function useCurrentTheme(providedTheme) {
   }, [providedTheme]);
   return currentTheme;
 }
-var StyleIsolationProvider = React3.forwardRef(
+var StyleIsolationProvider = React2.forwardRef(
   ({
     asChild = false,
     theme,
@@ -236,18 +208,18 @@ var StyleIsolationProvider = React3.forwardRef(
     style,
     ...props
   }, ref) => {
-    const Comp = asChild ? import_react_slot3.Slot : "div";
+    const Comp = asChild ? import_react_slot2.Slot : "div";
     const currentTheme = useCurrentTheme(theme);
-    const cssVariables = React3.useMemo(() => {
+    const cssVariables = React2.useMemo(() => {
       return CSS_VARIABLES[currentTheme];
     }, [currentTheme]);
-    const combinedStyle = React3.useMemo(() => {
+    const combinedStyle = React2.useMemo(() => {
       return {
         ...cssVariables,
         ...style
       };
     }, [cssVariables, style]);
-    const contextValue = React3.useMemo(
+    const contextValue = React2.useMemo(
       () => ({
         theme: currentTheme,
         namespace,
@@ -255,8 +227,10 @@ var StyleIsolationProvider = React3.forwardRef(
       }),
       [currentTheme, namespace, cssVariables]
     );
-    const isolationClasses = React3.useMemo(() => {
+    const isolationClasses = React2.useMemo(() => {
       const classes = [
+        namespace,
+        // Base namespace class required by compiled CSS (e.g., .ds-ui)
         `${namespace}-root`,
         // Namespace root
         `${namespace}-theme-${currentTheme}`
@@ -267,7 +241,7 @@ var StyleIsolationProvider = React3.forwardRef(
       }
       return classes;
     }, [namespace, currentTheme, resetStyles]);
-    return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(StyleIsolationContext.Provider, { value: contextValue, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(StyleIsolationContext.Provider, { value: contextValue, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
       Comp,
       {
         ref,
@@ -282,274 +256,11 @@ var StyleIsolationProvider = React3.forwardRef(
   }
 );
 StyleIsolationProvider.displayName = "StyleIsolationProvider";
-
-// src/components/theme/with-style-isolation.tsx
-var React5 = __toESM(require("react"));
-
-// src/lib/style-injection.ts
-var React4 = __toESM(require("react"));
-function injectStyles(css, options) {
-  if (typeof document === "undefined") {
-    return;
-  }
-  const { namespace, id = "default", priority = 0 } = options;
-  const styleId = `${namespace}-styles-${id}`;
-  if (document.getElementById(styleId)) {
-    return;
-  }
-  const styleElement = document.createElement("style");
-  styleElement.id = styleId;
-  styleElement.setAttribute("data-namespace", namespace);
-  styleElement.setAttribute("data-priority", priority.toString());
-  styleElement.textContent = css;
-  const existingStyles = Array.from(
-    document.querySelectorAll(`style[data-namespace="${namespace}"]`)
-  );
-  const insertBefore = existingStyles.find(
-    (style) => parseInt(style.getAttribute("data-priority") || "0") > priority
-  );
-  if (insertBefore) {
-    document.head.insertBefore(styleElement, insertBefore);
-  } else {
-    document.head.appendChild(styleElement);
-  }
-}
-function removeStyles(namespace, id = "default") {
-  if (typeof document === "undefined") {
-    return;
-  }
-  const styleId = `${namespace}-styles-${id}`;
-  const styleElement = document.getElementById(styleId);
-  if (styleElement) {
-    styleElement.remove();
-  }
-}
-function generateIsolationCSS(namespace) {
-  return `
-    /* Style Isolation CSS for ${namespace} */
-    .${namespace}-root {
-      /* Create isolated stacking context */
-      position: relative;
-      z-index: 0;
-      
-      /* Prevent style leakage */
-      contain: style;
-      
-      /* Ensure proper box model */
-      box-sizing: border-box;
-    }
-    
-    .${namespace}-root *,
-    .${namespace}-root *::before,
-    .${namespace}-root *::after {
-      box-sizing: border-box;
-    }
-    
-    /* Reset styles for isolation */
-    .${namespace}-reset {
-      /* Defensive CSS to prevent external interference */
-      all: initial;
-      
-      /* Restore essential properties */
-      display: block;
-      position: relative;
-      box-sizing: border-box;
-      
-      /* Font inheritance for text elements */
-      font-family: inherit;
-      font-size: inherit;
-      line-height: inherit;
-      color: inherit;
-    }
-    
-    /* High specificity overrides */
-    .${namespace}-root.${namespace}-root.${namespace}-root {
-      /* Triple specificity for strong isolation */
-      isolation: isolate;
-    }
-    
-    /* Theme-specific isolation */
-    .${namespace}-theme-light {
-      color-scheme: light;
-    }
-    
-    .${namespace}-theme-dark {
-      color-scheme: dark;
-    }
-  `;
-}
-function useStyleInjection(namespace) {
-  const inject = React4.useCallback(
-    (css, options = {}) => {
-      injectStyles(css, { namespace, ...options });
-    },
-    [namespace]
-  );
-  const remove = React4.useCallback(
-    (id = "default") => {
-      removeStyles(namespace, id);
-    },
-    [namespace]
-  );
-  const injectIsolationStyles = React4.useCallback(() => {
-    const css = generateIsolationCSS(namespace);
-    inject(css, { id: "isolation", priority: -1 });
-  }, [namespace, inject]);
-  return {
-    inject,
-    remove,
-    injectIsolationStyles
-  };
-}
-
-// src/components/theme/with-style-isolation.tsx
-var import_jsx_runtime4 = require("react/jsx-runtime");
-function withStyleIsolation(Component, options = {}) {
-  const {
-    namespace = "ds-ui",
-    resetStyles = true,
-    injectIsolationCSS = true,
-    wrapperProps = {}
-  } = options;
-  const WrappedComponent = React5.forwardRef((props, ref) => {
-    const { injectIsolationStyles } = useStyleInjection(namespace);
-    React5.useEffect(() => {
-      if (injectIsolationCSS) {
-        injectIsolationStyles();
-      }
-    }, [injectIsolationStyles, injectIsolationCSS]);
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-      StyleIsolationProvider,
-      {
-        namespace,
-        resetStyles,
-        ...wrapperProps,
-        children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Component, { ...props })
-      }
-    );
-  });
-  WrappedComponent.displayName = `withStyleIsolation(${Component.displayName || Component.name})`;
-  return WrappedComponent;
-}
-function useStyleIsolationSafe() {
-  try {
-    return useStyleIsolation();
-  } catch {
-    return {
-      theme: "light",
-      namespace: "ds-ui",
-      cssVariables: {}
-    };
-  }
-}
-function EnsureStyleIsolation({
-  children,
-  fallbackProps = {}
-}) {
-  const context = useStyleIsolationSafe();
-  const hasContext = context.namespace !== "ds-ui" || context.theme !== "light";
-  if (hasContext) {
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_jsx_runtime4.Fragment, { children });
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-    StyleIsolationProvider,
-    {
-      namespace: fallbackProps.namespace || "ds-ui",
-      resetStyles: fallbackProps.resetStyles !== false,
-      ...fallbackProps.wrapperProps,
-      children
-    }
-  );
-}
-
-// src/components/theme/design-system-root.tsx
-var React6 = __toESM(require("react"));
-
-// src/hooks/use-next-themes-integration.ts
-var import_react = require("react");
-function useNextThemesIntegration() {
-  const [theme, setTheme] = (0, import_react.useState)("light");
-  const [mounted, setMounted] = (0, import_react.useState)(false);
-  (0, import_react.useEffect)(() => {
-    setMounted(true);
-    if (typeof window !== "undefined") {
-      const nextThemesScript = document.querySelector("script[data-theme]");
-      if (nextThemesScript) {
-        const storedTheme = localStorage.getItem("theme");
-        if (storedTheme === "dark" || storedTheme === "light") {
-          setTheme(storedTheme);
-        } else {
-          const prefersDark = window.matchMedia(
-            "(prefers-color-scheme: dark)"
-          ).matches;
-          setTheme(prefersDark ? "dark" : "light");
-        }
-      } else {
-        const htmlElement = document.documentElement;
-        if (htmlElement.classList.contains("dark")) {
-          setTheme("dark");
-        } else {
-          setTheme("light");
-        }
-      }
-      const observer = new MutationObserver(() => {
-        const htmlElement = document.documentElement;
-        if (htmlElement.classList.contains("dark")) {
-          setTheme("dark");
-        } else if (htmlElement.classList.contains("light")) {
-          setTheme("light");
-        }
-      });
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ["class"]
-      });
-      const handleStorageChange = (e) => {
-        if (e.key === "theme" && (e.newValue === "light" || e.newValue === "dark")) {
-          setTheme(e.newValue);
-        }
-      };
-      window.addEventListener("storage", handleStorageChange);
-      return () => {
-        observer.disconnect();
-        window.removeEventListener("storage", handleStorageChange);
-      };
-    }
-  }, []);
-  return {
-    theme,
-    mounted
-  };
-}
-function useDesignSystemTheme() {
-  const { theme } = useNextThemesIntegration();
-  return theme;
-}
-
-// src/components/theme/design-system-root.tsx
-var import_jsx_runtime5 = require("react/jsx-runtime");
-var DesignSystemRoot = React6.forwardRef(({ theme: explicitTheme, autoDetectTheme = true, ...props }, ref) => {
-  const detectedTheme = useDesignSystemTheme();
-  const currentTheme = explicitTheme || (autoDetectTheme ? detectedTheme : "light");
-  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(StyleIsolationProvider, { ref, theme: currentTheme, ...props });
-});
-DesignSystemRoot.displayName = "DesignSystemRoot";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Button,
-  DesignSystemProvider,
-  DesignSystemRoot,
-  EnsureStyleIsolation,
   StyleIsolationProvider,
   cn,
-  generateIsolationCSS,
-  injectStyles,
-  removeStyles,
-  useDesignSystemTheme,
-  useNextThemesIntegration,
-  useStyleInjection,
-  useStyleIsolation,
-  useStyleIsolationSafe,
-  withStyleIsolation
+  useStyleIsolation
 });
 //# sourceMappingURL=index.js.map

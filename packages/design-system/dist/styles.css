@@ -103,32 +103,32 @@
         }
 /* Ultra-high specificity rules to override any external interference */
 /* Defensive styles to override aggressive external resets */
-.ds-ui.ds-ui.ds-ui iframe {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui iframe {
           margin: 0;
           padding: 0;
           border: 0;
           vertical-align: baseline;
         }
 /* Reset iframe */
-.ds-ui.ds-ui.ds-ui legend {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui legend {
           margin: 0;
           padding: 0;
           border: 0;
           display: block;
           width: 100%;
         }
-.ds-ui.ds-ui.ds-ui fieldset {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui fieldset {
           margin: 0;
           padding: 0;
           border: 0;
           min-width: 0;
         }
 /* Reset form fieldset and legend */
-.ds-ui.ds-ui.ds-ui img,
-        .ds-ui.ds-ui.ds-ui video,
-        .ds-ui.ds-ui.ds-ui audio,
-        .ds-ui.ds-ui.ds-ui canvas,
-        .ds-ui.ds-ui.ds-ui svg {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui img,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui video,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui audio,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui canvas,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui svg {
           margin: 0;
           padding: 0;
           border: 0;
@@ -138,12 +138,12 @@
           height: auto;
         }
 /* Reset media elements */
-.ds-ui.ds-ui.ds-ui td,
-        .ds-ui.ds-ui.ds-ui th,
-        .ds-ui.ds-ui.ds-ui tr,
-        .ds-ui.ds-ui.ds-ui thead,
-        .ds-ui.ds-ui.ds-ui tbody,
-        .ds-ui.ds-ui.ds-ui tfoot {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui td,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui th,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui tr,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui thead,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui tbody,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui tfoot {
           padding: 0;
           margin: 0;
           text-align: left;
@@ -151,7 +151,7 @@
           border: 0;
           background: transparent;
         }
-.ds-ui.ds-ui.ds-ui table {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui table {
           border-collapse: collapse;
           border-spacing: 0;
           /* Reset table-specific properties */
@@ -159,7 +159,7 @@
           table-layout: auto;
         }
 /* Prevent external table resets */
-.ds-ui.ds-ui.ds-ui a {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui a {
           color: inherit;
           text-decoration: inherit;
           background: transparent;
@@ -167,33 +167,33 @@
           -webkit-tap-highlight-color: transparent;
         }
 /* Prevent external link resets */
-.ds-ui.ds-ui.ds-ui ul,
-        .ds-ui.ds-ui.ds-ui ol,
-        .ds-ui.ds-ui.ds-ui li,
-        .ds-ui.ds-ui.ds-ui dl,
-        .ds-ui.ds-ui.ds-ui dt,
-        .ds-ui.ds-ui.ds-ui dd {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui ul,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui ol,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui li,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui dl,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui dt,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui dd {
           margin: 0;
           padding: 0;
           list-style: none;
         }
 /* Prevent external list resets */
-.ds-ui.ds-ui.ds-ui h1,
-        .ds-ui.ds-ui.ds-ui h2,
-        .ds-ui.ds-ui.ds-ui h3,
-        .ds-ui.ds-ui.ds-ui h4,
-        .ds-ui.ds-ui.ds-ui h5,
-        .ds-ui.ds-ui.ds-ui h6,
-        .ds-ui.ds-ui.ds-ui p,
-        .ds-ui.ds-ui.ds-ui div,
-        .ds-ui.ds-ui.ds-ui span,
-        .ds-ui.ds-ui.ds-ui article,
-        .ds-ui.ds-ui.ds-ui section,
-        .ds-ui.ds-ui.ds-ui header,
-        .ds-ui.ds-ui.ds-ui footer,
-        .ds-ui.ds-ui.ds-ui main,
-        .ds-ui.ds-ui.ds-ui aside,
-        .ds-ui.ds-ui.ds-ui nav {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui h1,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui h2,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui h3,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui h4,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui h5,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui h6,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui p,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui div,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui span,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui article,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui section,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui header,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui footer,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui main,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui aside,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui nav {
           margin: 0;
           padding: 0;
           /* Reset text properties */
@@ -203,11 +203,11 @@
           color: inherit;
         }
 /* Prevent external margin/padding resets on text elements */
-.ds-ui.ds-ui.ds-ui input,
-        .ds-ui.ds-ui.ds-ui textarea,
-        .ds-ui.ds-ui.ds-ui select,
-        .ds-ui.ds-ui.ds-ui option,
-        .ds-ui.ds-ui.ds-ui optgroup {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui input,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui textarea,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui select,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui option,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui optgroup {
           font-family: inherit;
           font-size: inherit;
           line-height: inherit;
@@ -230,17 +230,17 @@
           box-shadow: none;
         }
 /* Input and form element reset */
-.ds-ui.ds-ui.ds-ui [role="button"] {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui [role="button"] {
           cursor: pointer;
           -webkit-tap-highlight-color: transparent;
           -webkit-user-select: none;
           -moz-user-select: none;
           user-select: none;
         }
-.ds-ui.ds-ui.ds-ui button,
-        .ds-ui.ds-ui.ds-ui [type="button"],
-        .ds-ui.ds-ui.ds-ui [type="reset"],
-        .ds-ui.ds-ui.ds-ui [type="submit"] {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui button,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui [type="button"],
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui [type="reset"],
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui [type="submit"] {
           font-family: inherit;
           font-size: inherit;
           line-height: inherit;
@@ -272,9 +272,9 @@
           user-select: none;
         }
 /* Button reset - critical for preventing external button resets */
-.ds-ui.ds-ui.ds-ui *,
-        .ds-ui.ds-ui.ds-ui *::before,
-        .ds-ui.ds-ui.ds-ui *::after {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui *,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui *::before,
+        .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui *::after {
           box-sizing: border-box;
           /* Reset all margins and paddings to prevent external interference */
           margin: 0;
@@ -314,7 +314,7 @@
           animation: none;
           transition: none;
         }
-.ds-ui.ds-ui.ds-ui {
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui {
           /* Establish a new stacking context and contain styles */
           position: relative;
           box-sizing: border-box;
@@ -345,113 +345,113 @@
           transition: none;
         }
 /* Design System Scoped Reset - Enhanced for Style Isolation */
-.ds-ui,.ds-ui.ds-ui.ds-ui  ::before,.ds-ui.ds-ui.ds-ui  ::after {
-          --tw-border-spacing-x: 0;
-          --tw-border-spacing-y: 0;
-          --tw-translate-x: 0;
-          --tw-translate-y: 0;
-          --tw-rotate: 0;
-          --tw-skew-x: 0;
-          --tw-skew-y: 0;
-          --tw-scale-x: 1;
-          --tw-scale-y: 1;
-          --tw-pan-x:  ;
-          --tw-pan-y:  ;
-          --tw-pinch-zoom:  ;
-          --tw-scroll-snap-strictness: proximity;
-          --tw-gradient-from-position:  ;
-          --tw-gradient-via-position:  ;
-          --tw-gradient-to-position:  ;
-          --tw-ordinal:  ;
-          --tw-slashed-zero:  ;
-          --tw-numeric-figure:  ;
-          --tw-numeric-spacing:  ;
-          --tw-numeric-fraction:  ;
-          --tw-ring-inset:  ;
-          --tw-ring-offset-width: 0px;
-          --tw-ring-offset-color: #fff;
-          --tw-ring-color: rgb(59 130 246 / 0.5);
-          --tw-ring-offset-shadow: 0 0 #0000;
-          --tw-ring-shadow: 0 0 #0000;
-          --tw-shadow: 0 0 #0000;
-          --tw-shadow-colored: 0 0 #0000;
-          --tw-blur:  ;
-          --tw-brightness:  ;
-          --tw-contrast:  ;
-          --tw-grayscale:  ;
-          --tw-hue-rotate:  ;
-          --tw-invert:  ;
-          --tw-saturate:  ;
-          --tw-sepia:  ;
-          --tw-drop-shadow:  ;
-          --tw-backdrop-blur:  ;
-          --tw-backdrop-brightness:  ;
-          --tw-backdrop-contrast:  ;
-          --tw-backdrop-grayscale:  ;
-          --tw-backdrop-hue-rotate:  ;
-          --tw-backdrop-invert:  ;
-          --tw-backdrop-opacity:  ;
-          --tw-backdrop-saturate:  ;
-          --tw-backdrop-sepia:  ;
-          --tw-contain-size:  ;
-          --tw-contain-layout:  ;
-          --tw-contain-paint:  ;
-          --tw-contain-style:  ;
+.ds-ui,.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui  ::before,.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui  ::after {
+          --tw-border-spacing-x: 0 !important;
+          --tw-border-spacing-y: 0 !important;
+          --tw-translate-x: 0 !important;
+          --tw-translate-y: 0 !important;
+          --tw-rotate: 0 !important;
+          --tw-skew-x: 0 !important;
+          --tw-skew-y: 0 !important;
+          --tw-scale-x: 1 !important;
+          --tw-scale-y: 1 !important;
+          --tw-pan-x:   !important;
+          --tw-pan-y:   !important;
+          --tw-pinch-zoom:   !important;
+          --tw-scroll-snap-strictness: proximity !important;
+          --tw-gradient-from-position:   !important;
+          --tw-gradient-via-position:   !important;
+          --tw-gradient-to-position:   !important;
+          --tw-ordinal:   !important;
+          --tw-slashed-zero:   !important;
+          --tw-numeric-figure:   !important;
+          --tw-numeric-spacing:   !important;
+          --tw-numeric-fraction:   !important;
+          --tw-ring-inset:   !important;
+          --tw-ring-offset-width: 0px !important;
+          --tw-ring-offset-color: #fff !important;
+          --tw-ring-color: rgb(59 130 246 / 0.5) !important;
+          --tw-ring-offset-shadow: 0 0 #0000 !important;
+          --tw-ring-shadow: 0 0 #0000 !important;
+          --tw-shadow: 0 0 #0000 !important;
+          --tw-shadow-colored: 0 0 #0000 !important;
+          --tw-blur:   !important;
+          --tw-brightness:   !important;
+          --tw-contrast:   !important;
+          --tw-grayscale:   !important;
+          --tw-hue-rotate:   !important;
+          --tw-invert:   !important;
+          --tw-saturate:   !important;
+          --tw-sepia:   !important;
+          --tw-drop-shadow:   !important;
+          --tw-backdrop-blur:   !important;
+          --tw-backdrop-brightness:   !important;
+          --tw-backdrop-contrast:   !important;
+          --tw-backdrop-grayscale:   !important;
+          --tw-backdrop-hue-rotate:   !important;
+          --tw-backdrop-invert:   !important;
+          --tw-backdrop-opacity:   !important;
+          --tw-backdrop-saturate:   !important;
+          --tw-backdrop-sepia:   !important;
+          --tw-contain-size:   !important;
+          --tw-contain-layout:   !important;
+          --tw-contain-paint:   !important;
+          --tw-contain-style:   !important;
 }
-.ds-ui.ds-ui.ds-ui ::backdrop {
-          --tw-border-spacing-x: 0;
-          --tw-border-spacing-y: 0;
-          --tw-translate-x: 0;
-          --tw-translate-y: 0;
-          --tw-rotate: 0;
-          --tw-skew-x: 0;
-          --tw-skew-y: 0;
-          --tw-scale-x: 1;
-          --tw-scale-y: 1;
-          --tw-pan-x:  ;
-          --tw-pan-y:  ;
-          --tw-pinch-zoom:  ;
-          --tw-scroll-snap-strictness: proximity;
-          --tw-gradient-from-position:  ;
-          --tw-gradient-via-position:  ;
-          --tw-gradient-to-position:  ;
-          --tw-ordinal:  ;
-          --tw-slashed-zero:  ;
-          --tw-numeric-figure:  ;
-          --tw-numeric-spacing:  ;
-          --tw-numeric-fraction:  ;
-          --tw-ring-inset:  ;
-          --tw-ring-offset-width: 0px;
-          --tw-ring-offset-color: #fff;
-          --tw-ring-color: rgb(59 130 246 / 0.5);
-          --tw-ring-offset-shadow: 0 0 #0000;
-          --tw-ring-shadow: 0 0 #0000;
-          --tw-shadow: 0 0 #0000;
-          --tw-shadow-colored: 0 0 #0000;
-          --tw-blur:  ;
-          --tw-brightness:  ;
-          --tw-contrast:  ;
-          --tw-grayscale:  ;
-          --tw-hue-rotate:  ;
-          --tw-invert:  ;
-          --tw-saturate:  ;
-          --tw-sepia:  ;
-          --tw-drop-shadow:  ;
-          --tw-backdrop-blur:  ;
-          --tw-backdrop-brightness:  ;
-          --tw-backdrop-contrast:  ;
-          --tw-backdrop-grayscale:  ;
-          --tw-backdrop-hue-rotate:  ;
-          --tw-backdrop-invert:  ;
-          --tw-backdrop-opacity:  ;
-          --tw-backdrop-saturate:  ;
-          --tw-backdrop-sepia:  ;
-          --tw-contain-size:  ;
-          --tw-contain-layout:  ;
-          --tw-contain-paint:  ;
-          --tw-contain-style:  ;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui ::backdrop {
+          --tw-border-spacing-x: 0 !important;
+          --tw-border-spacing-y: 0 !important;
+          --tw-translate-x: 0 !important;
+          --tw-translate-y: 0 !important;
+          --tw-rotate: 0 !important;
+          --tw-skew-x: 0 !important;
+          --tw-skew-y: 0 !important;
+          --tw-scale-x: 1 !important;
+          --tw-scale-y: 1 !important;
+          --tw-pan-x:   !important;
+          --tw-pan-y:   !important;
+          --tw-pinch-zoom:   !important;
+          --tw-scroll-snap-strictness: proximity !important;
+          --tw-gradient-from-position:   !important;
+          --tw-gradient-via-position:   !important;
+          --tw-gradient-to-position:   !important;
+          --tw-ordinal:   !important;
+          --tw-slashed-zero:   !important;
+          --tw-numeric-figure:   !important;
+          --tw-numeric-spacing:   !important;
+          --tw-numeric-fraction:   !important;
+          --tw-ring-inset:   !important;
+          --tw-ring-offset-width: 0px !important;
+          --tw-ring-offset-color: #fff !important;
+          --tw-ring-color: rgb(59 130 246 / 0.5) !important;
+          --tw-ring-offset-shadow: 0 0 #0000 !important;
+          --tw-ring-shadow: 0 0 #0000 !important;
+          --tw-shadow: 0 0 #0000 !important;
+          --tw-shadow-colored: 0 0 #0000 !important;
+          --tw-blur:   !important;
+          --tw-brightness:   !important;
+          --tw-contrast:   !important;
+          --tw-grayscale:   !important;
+          --tw-hue-rotate:   !important;
+          --tw-invert:   !important;
+          --tw-saturate:   !important;
+          --tw-sepia:   !important;
+          --tw-drop-shadow:   !important;
+          --tw-backdrop-blur:   !important;
+          --tw-backdrop-brightness:   !important;
+          --tw-backdrop-contrast:   !important;
+          --tw-backdrop-grayscale:   !important;
+          --tw-backdrop-hue-rotate:   !important;
+          --tw-backdrop-invert:   !important;
+          --tw-backdrop-opacity:   !important;
+          --tw-backdrop-saturate:   !important;
+          --tw-backdrop-sepia:   !important;
+          --tw-contain-size:   !important;
+          --tw-contain-layout:   !important;
+          --tw-contain-paint:   !important;
+          --tw-contain-style:   !important;
 }
-  .ds-ui.ds-ui.ds-ui {
+  .ds-ui.ds-ui.ds-ui.ds-ui.ds-ui {
     --ds-background: #fefefe; /* neutral/50 */
     --ds-foreground: #1e2022; /* neutral/800 */
     --ds-card: #ffffff;
@@ -514,190 +514,190 @@
 
     --ds-radius: 0.5rem;
   }
-.ds-ui.ds-ui.ds-ui .box-border {
-          box-sizing: border-box;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .box-border {
+          box-sizing: border-box !important;
 }
-.ds-ui.ds-ui.ds-ui .inline-flex {
-          display: inline-flex;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .inline-flex {
+          display: inline-flex !important;
 }
-.ds-ui.ds-ui.ds-ui .h-10 {
-          height: 2.5rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .h-10 {
+          height: 2.5rem !important;
 }
-.ds-ui.ds-ui.ds-ui .h-8 {
-          height: 2rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .h-8 {
+          height: 2rem !important;
 }
-.ds-ui.ds-ui.ds-ui .h-9 {
-          height: 2.25rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .h-9 {
+          height: 2.25rem !important;
 }
-.ds-ui.ds-ui.ds-ui .w-9 {
-          width: 2.25rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .w-9 {
+          width: 2.25rem !important;
 }
-.ds-ui.ds-ui.ds-ui .appearance-none {
-          -webkit-appearance: none;
-             -moz-appearance: none;
-                  appearance: none;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .appearance-none {
+          -webkit-appearance: none !important;
+             -moz-appearance: none !important;
+                  appearance: none !important;
 }
-.ds-ui.ds-ui.ds-ui .items-center {
-          align-items: center;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .items-center {
+          align-items: center !important;
 }
-.ds-ui.ds-ui.ds-ui .justify-center {
-          justify-content: center;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .justify-center {
+          justify-content: center !important;
 }
-.ds-ui.ds-ui.ds-ui .whitespace-nowrap {
-          white-space: nowrap;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .whitespace-nowrap {
+          white-space: nowrap !important;
 }
-.ds-ui.ds-ui.ds-ui .rounded-md {
-          border-radius: calc(var(--ds-radius) - 2px);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .rounded-md {
+          border-radius: calc(var(--ds-radius) - 2px) !important;
 }
-.ds-ui.ds-ui.ds-ui .border {
-          border-width: 1px;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .border {
+          border-width: 1px !important;
 }
-.ds-ui.ds-ui.ds-ui .border-input {
-          border-color: var(--ds-input);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .border-input {
+          border-color: var(--ds-input) !important;
 }
-.ds-ui.ds-ui.ds-ui .bg-background {
-          background-color: var(--ds-background);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .bg-background {
+          background-color: var(--ds-background) !important;
 }
-.ds-ui.ds-ui.ds-ui .bg-destructive {
-          background-color: var(--ds-destructive);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .bg-destructive {
+          background-color: var(--ds-destructive) !important;
 }
-.ds-ui.ds-ui.ds-ui .bg-primary {
-          background-color: var(--ds-primary);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .bg-primary {
+          background-color: var(--ds-primary) !important;
 }
-.ds-ui.ds-ui.ds-ui .bg-secondary {
-          background-color: var(--ds-secondary);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .bg-secondary {
+          background-color: var(--ds-secondary) !important;
 }
-.ds-ui.ds-ui.ds-ui .px-3 {
-          padding-left: 0.75rem;
-          padding-right: 0.75rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .px-3 {
+          padding-left: 0.75rem !important;
+          padding-right: 0.75rem !important;
 }
-.ds-ui.ds-ui.ds-ui .px-4 {
-          padding-left: 1rem;
-          padding-right: 1rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .px-4 {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
 }
-.ds-ui.ds-ui.ds-ui .px-8 {
-          padding-left: 2rem;
-          padding-right: 2rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .px-8 {
+          padding-left: 2rem !important;
+          padding-right: 2rem !important;
 }
-.ds-ui.ds-ui.ds-ui .py-2 {
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .py-2 {
+          padding-top: 0.5rem !important;
+          padding-bottom: 0.5rem !important;
 }
-.ds-ui.ds-ui.ds-ui .text-sm {
-          font-size: 0.875rem;
-          line-height: 1.25rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .text-sm {
+          font-size: 0.875rem !important;
+          line-height: 1.25rem !important;
 }
-.ds-ui.ds-ui.ds-ui .text-xs {
-          font-size: 0.75rem;
-          line-height: 1rem;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .text-xs {
+          font-size: 0.75rem !important;
+          line-height: 1rem !important;
 }
-.ds-ui.ds-ui.ds-ui .font-medium {
-          font-weight: 500;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .font-medium {
+          font-weight: 500 !important;
 }
-.ds-ui.ds-ui.ds-ui .normal-case {
-          text-transform: none;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .normal-case {
+          text-transform: none !important;
 }
-.ds-ui.ds-ui.ds-ui .not-italic {
-          font-style: normal;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .not-italic {
+          font-style: normal !important;
 }
-.ds-ui.ds-ui.ds-ui .tracking-normal {
-          letter-spacing: 0em;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .tracking-normal {
+          letter-spacing: 0em !important;
 }
-.ds-ui.ds-ui.ds-ui .text-accent-foreground {
-          color: var(--ds-accent-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .text-accent-foreground {
+          color: var(--ds-accent-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .text-destructive-foreground {
-          color: var(--ds-destructive-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .text-destructive-foreground {
+          color: var(--ds-destructive-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .text-primary {
-          color: var(--ds-primary);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .text-primary {
+          color: var(--ds-primary) !important;
 }
-.ds-ui.ds-ui.ds-ui .text-primary-foreground {
-          color: var(--ds-primary-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .text-primary-foreground {
+          color: var(--ds-primary-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .text-secondary-foreground {
-          color: var(--ds-secondary-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .text-secondary-foreground {
+          color: var(--ds-secondary-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .underline-offset-4 {
-          text-underline-offset: 4px;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .underline-offset-4 {
+          text-underline-offset: 4px !important;
 }
-.ds-ui.ds-ui.ds-ui .shadow {
-          --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-          --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .shadow {
+          --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+          --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color) !important;
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }
-.ds-ui.ds-ui.ds-ui .shadow-sm {
-          --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-          --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .shadow-sm {
+          --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+          --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color) !important;
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }
-.ds-ui.ds-ui.ds-ui .outline {
-          outline-style: solid;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .outline {
+          outline-style: solid !important;
 }
-.ds-ui.ds-ui.ds-ui .transition-colors {
-          transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-duration: 150ms;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .transition-colors {
+          transition-property: color, background-color, border-color, text-decoration-color, fill, stroke !important;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+          transition-duration: 150ms !important;
 }
-.ds-ui.ds-ui.ds-ui .hover\:bg-accent:hover {
-          background-color: var(--ds-accent);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .hover\:bg-accent:hover {
+          background-color: var(--ds-accent) !important;
 }
-.ds-ui.ds-ui.ds-ui .hover\:text-accent-foreground:hover {
-          color: var(--ds-accent-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .hover\:text-accent-foreground:hover {
+          color: var(--ds-accent-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .hover\:text-destructive-foreground:hover {
-          color: var(--ds-destructive-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .hover\:text-destructive-foreground:hover {
+          color: var(--ds-destructive-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .hover\:text-primary-foreground:hover {
-          color: var(--ds-primary-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .hover\:text-primary-foreground:hover {
+          color: var(--ds-primary-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .hover\:text-secondary-foreground:hover {
-          color: var(--ds-secondary-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .hover\:text-secondary-foreground:hover {
+          color: var(--ds-secondary-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .hover\:underline:hover {
-          text-decoration-line: underline;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .hover\:underline:hover {
+          text-decoration-line: underline !important;
 }
-.ds-ui.ds-ui.ds-ui .focus\:text-accent-foreground:focus {
-          color: var(--ds-accent-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .focus\:text-accent-foreground:focus {
+          color: var(--ds-accent-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .focus\:text-destructive-foreground:focus {
-          color: var(--ds-destructive-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .focus\:text-destructive-foreground:focus {
+          color: var(--ds-destructive-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .focus\:text-primary-foreground:focus {
-          color: var(--ds-primary-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .focus\:text-primary-foreground:focus {
+          color: var(--ds-primary-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .focus\:text-secondary-foreground:focus {
-          color: var(--ds-secondary-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .focus\:text-secondary-foreground:focus {
+          color: var(--ds-secondary-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .focus-visible\:outline-none:focus-visible {
-          outline: 2px solid transparent;
-          outline-offset: 2px;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .focus-visible\:outline-none:focus-visible {
+          outline: 2px solid transparent !important;
+          outline-offset: 2px !important;
 }
-.ds-ui.ds-ui.ds-ui .focus-visible\:ring-1:focus-visible {
-          --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-          --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-          box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .focus-visible\:ring-1:focus-visible {
+          --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+          --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+          box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
 }
-.ds-ui.ds-ui.ds-ui .focus-visible\:ring-ring:focus-visible {
-          --tw-ring-color: var(--ds-ring);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .focus-visible\:ring-ring:focus-visible {
+          --tw-ring-color: var(--ds-ring) !important;
 }
-.ds-ui.ds-ui.ds-ui .active\:text-accent-foreground:active {
-          color: var(--ds-accent-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .active\:text-accent-foreground:active {
+          color: var(--ds-accent-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .active\:text-destructive-foreground:active {
-          color: var(--ds-destructive-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .active\:text-destructive-foreground:active {
+          color: var(--ds-destructive-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .active\:text-primary-foreground:active {
-          color: var(--ds-primary-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .active\:text-primary-foreground:active {
+          color: var(--ds-primary-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .active\:text-secondary-foreground:active {
-          color: var(--ds-secondary-foreground);
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .active\:text-secondary-foreground:active {
+          color: var(--ds-secondary-foreground) !important;
 }
-.ds-ui.ds-ui.ds-ui .disabled\:pointer-events-none:disabled {
-          pointer-events: none;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .disabled\:pointer-events-none:disabled {
+          pointer-events: none !important;
 }
-.ds-ui.ds-ui.ds-ui .disabled\:opacity-50:disabled {
-          opacity: 0.5;
+.ds-ui.ds-ui.ds-ui.ds-ui.ds-ui .disabled\:opacity-50:disabled {
+          opacity: 0.5 !important;
 }
 /* Missing opacity modifier classes */
 .ds-ui.ds-ui.ds-ui .hover\:bg-primary\/90:hover {

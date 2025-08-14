@@ -188,6 +188,7 @@ export const StyleIsolationProvider = React.forwardRef<
     // Generate class names for isolation
     const isolationClasses = React.useMemo(() => {
       const classes = [
+        namespace, // Base namespace class required by compiled CSS (e.g., .ds-ui)
         `${namespace}-root`, // Namespace root
         `${namespace}-theme-${currentTheme}`, // Theme-specific class
       ];
