@@ -24,7 +24,12 @@
   ],
   "scripts": {
     "build": "tsup && postcss src/styles.css -o dist/styles.css",
-    "dev": "tsup --watch"
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build",
+    "publish:gh": "npm publish --registry=https://npm.pkg.github.com",
+    "release:patch": "npm version patch && npm run build && npm run publish:gh",
+    "release:minor": "npm version minor && npm run build && npm run publish:gh",
+    "release:major": "npm version major && npm run build && npm run publish:gh"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",

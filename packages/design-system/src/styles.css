@@ -4,92 +4,110 @@
 
 @layer base {
   :root {
-    --ds-background: 0 0% 100%;
-    --ds-foreground: 222.2 84% 4.9%;
-    --ds-card: 0 0% 100%;
-    --ds-card-foreground: 222.2 84% 4.9%;
-    --ds-popover: 0 0% 100%;
-    --ds-popover-foreground: 222.2 84% 4.9%;
-    --ds-primary: 221.2 83.2% 53.3%;
-    --ds-primary-foreground: 210 40% 98%;
-    --ds-secondary: 210 40% 96%;
-    --ds-secondary-foreground: 222.2 84% 4.9%;
-    --ds-muted: 210 40% 96%;
-    --ds-muted-foreground: 215.4 16.3% 46.9%;
-    --ds-accent: 210 40% 96%;
-    --ds-accent-foreground: 222.2 84% 4.9%;
-    --ds-destructive: 0 84.2% 60.2%;
-    --ds-destructive-foreground: 210 40% 98%;
-    --ds-border: 214.3 31.8% 91.4%;
-    --ds-input: 214.3 31.8% 91.4%;
-    --ds-ring: 221.2 83.2% 53.3%;
+    --ds-background: #fefefe; /* neutral/50 */
+    --ds-foreground: #1e2022; /* neutral/800 */
+    --ds-card: #ffffff;
+    --ds-popover: #ffffff;
+
+    --ds-primary: #0172fe; /* blue/500 */
+    --ds-primary-foreground: #ffffff;
+
+    --ds-secondary: #fbfcfd; /* neutral/100 */
+    --ds-secondary-foreground: #1e2022;
+
+    --ds-muted: #f7f8f9; /* neutral/200 */
+    --ds-muted-foreground: #53585c; /* neutral/600 */
+
+    --ds-accent: #a670eb; /* purple/500 */
+    --ds-accent-foreground: #ffffff;
+
+    --ds-destructive: #f83b68; /* pink/500 */
+    --ds-destructive-foreground: #ffffff;
+
+    --ds-border: #e9ebee; /* neutral/300 */
+    --ds-input: #e9ebee;
+    --ds-ring: #0172fe;
+
     --ds-radius: 0.5rem;
   }
 
   [data-ds-theme] {
-    --ds-background: 0 0% 100%;
-    --ds-foreground: 222.2 84% 4.9%;
-    --ds-card: 0 0% 100%;
-    --ds-card-foreground: 222.2 84% 4.9%;
-    --ds-popover: 0 0% 100%;
-    --ds-popover-foreground: 222.2 84% 4.9%;
-    --ds-primary: 221.2 83.2% 53.3%;
-    --ds-primary-foreground: 210 40% 98%;
-    --ds-secondary: 210 40% 96%;
-    --ds-secondary-foreground: 222.2 84% 4.9%;
-    --ds-muted: 210 40% 96%;
-    --ds-muted-foreground: 215.4 16.3% 46.9%;
-    --ds-accent: 210 40% 96%;
-    --ds-accent-foreground: 222.2 84% 4.9%;
-    --ds-destructive: 0 84.2% 60.2%;
-    --ds-destructive-foreground: 210 40% 98%;
-    --ds-border: 214.3 31.8% 91.4%;
-    --ds-input: 214.3 31.8% 91.4%;
-    --ds-ring: 221.2 83.2% 53.3%;
+    --ds-background: #fefefe;
+    --ds-foreground: #1e2022;
+    --ds-card: #ffffff;
+    --ds-popover: #ffffff;
+
+    --ds-primary: #0172fe;
+    --ds-primary-foreground: #ffffff;
+
+    --ds-secondary: #fbfcfd;
+    --ds-secondary-foreground: #1e2022;
+
+    --ds-muted: #f7f8f9;
+    --ds-muted-foreground: #53585c;
+
+    --ds-accent: #a670eb;
+    --ds-accent-foreground: #ffffff;
+
+    --ds-destructive: #f83b68;
+    --ds-destructive-foreground: #ffffff;
+
+    --ds-border: #e9ebee;
+    --ds-input: #e9ebee;
+    --ds-ring: #0172fe;
+
     --ds-radius: 0.5rem;
   }
 
   .dark {
-    --ds-background: 222.2 84% 4.9%;
-    --ds-foreground: 210 40% 98%;
-    --ds-card: 222.2 84% 4.9%;
-    --ds-card-foreground: 210 40% 98%;
-    --ds-popover: 222.2 84% 4.9%;
-    --ds-popover-foreground: 210 40% 98%;
-    --ds-primary: 217.2 91.2% 59.8%;
-    --ds-primary-foreground: 222.2 84% 4.9%;
-    --ds-secondary: 217.2 32.6% 17.5%;
-    --ds-secondary-foreground: 210 40% 98%;
-    --ds-muted: 217.2 32.6% 17.5%;
-    --ds-muted-foreground: 215 20.2% 65.1%;
-    --ds-accent: 217.2 32.6% 17.5%;
-    --ds-accent-foreground: 210 40% 98%;
-    --ds-destructive: 0 62.8% 30.6%;
-    --ds-destructive-foreground: 210 40% 98%;
-    --ds-border: 217.2 32.6% 17.5%;
-    --ds-input: 217.2 32.6% 17.5%;
-    --ds-ring: 224.3 76.3% 94.1%;
+    --ds-background: #1e2022;
+    --ds-foreground: #ffffff;
+    --ds-card: #1e2022;
+    --ds-popover: #1e2022;
+
+    --ds-primary: #0172fe;
+    --ds-primary-foreground: #ffffff;
+
+    --ds-secondary: #3d4044; /* neutral/700 */
+    --ds-secondary-foreground: #ffffff;
+
+    --ds-muted: #2e3236;
+    --ds-muted-foreground: #b3bac2;
+
+    --ds-accent: #977aec; /* purple/400 */
+    --ds-accent-foreground: #ffffff;
+
+    --ds-destructive: #f83b68;
+    --ds-destructive-foreground: #ffffff;
+
+    --ds-border: #3d4044;
+    --ds-input: #3d4044;
+    --ds-ring: #4d9cfe; /* blue/400 */
   }
 
   [data-ds-theme].dark {
-    --ds-background: 222.2 84% 4.9%;
-    --ds-foreground: 210 40% 98%;
-    --ds-card: 222.2 84% 4.9%;
-    --ds-card-foreground: 210 40% 98%;
-    --ds-popover: 222.2 84% 4.9%;
-    --ds-popover-foreground: 210 40% 98%;
-    --ds-primary: 217.2 91.2% 59.8%;
-    --ds-primary-foreground: 222.2 84% 4.9%;
-    --ds-secondary: 217.2 32.6% 17.5%;
-    --ds-secondary-foreground: 210 40% 98%;
-    --ds-muted: 217.2 32.6% 17.5%;
-    --ds-muted-foreground: 215 20.2% 65.1%;
-    --ds-accent: 217.2 32.6% 17.5%;
-    --ds-accent-foreground: 210 40% 98%;
-    --ds-destructive: 0 62.8% 30.6%;
-    --ds-destructive-foreground: 210 40% 98%;
-    --ds-border: 217.2 32.6% 17.5%;
-    --ds-input: 217.2 32.6% 17.5%;
-    --ds-ring: 224.3 76.3% 94.1%;
+    --ds-background: #1e2022;
+    --ds-foreground: #ffffff;
+    --ds-card: #1e2022;
+    --ds-popover: #1e2022;
+
+    --ds-primary: #0172fe;
+    --ds-primary-foreground: #ffffff;
+
+    --ds-secondary: #3d4044;
+    --ds-secondary-foreground: #ffffff;
+
+    --ds-muted: #2e3236;
+    --ds-muted-foreground: #b3bac2;
+
+    --ds-accent: #977aec;
+    --ds-accent-foreground: #ffffff;
+
+    --ds-destructive: #f83b68;
+    --ds-destructive-foreground: #ffffff;
+
+    --ds-border: #3d4044;
+    --ds-input: #3d4044;
+    --ds-ring: #4d9cfe;
   }
 }

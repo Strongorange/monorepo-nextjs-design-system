@@ -3,30 +3,30 @@ const designSystemConfig = {
   theme: {
     extend: {
       colors: {
-        border: "hsl(var(--ds-border))",
-        input: "hsl(var(--ds-input))",
-        ring: "hsl(var(--ds-ring))",
-        background: "hsl(var(--ds-background))",
-        foreground: "hsl(var(--ds-foreground))",
+        border: "var(--ds-border)",
+        input: "var(--ds-input)",
+        ring: "var(--ds-ring)",
+        background: "var(--ds-background)",
+        foreground: "var(--ds-foreground)",
         primary: {
-          DEFAULT: "hsl(var(--ds-primary))",
-          foreground: "hsl(var(--ds-primary-foreground))",
+          DEFAULT: "var(--ds-primary)",
+          foreground: "var(--ds-primary-foreground)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--ds-secondary))",
-          foreground: "hsl(var(--ds-secondary-foreground))",
+          DEFAULT: "var(--ds-secondary)",
+          foreground: "var(--ds-secondary-foreground)",
         },
         destructive: {
-          DEFAULT: "hsl(var(--ds-destructive))",
-          foreground: "hsl(var(--ds-destructive-foreground))",
+          DEFAULT: "var(--ds-destructive)",
+          foreground: "var(--ds-destructive-foreground)",
         },
         muted: {
-          DEFAULT: "hsl(var(--ds-muted))",
-          foreground: "hsl(var(--ds-muted-foreground))",
+          DEFAULT: "var(--ds-muted)",
+          foreground: "var(--ds-muted-foreground)",
         },
         accent: {
-          DEFAULT: "hsl(var(--ds-accent))",
-          foreground: "hsl(var(--ds-accent-foreground))",
+          DEFAULT: "var(--ds-accent)",
+          foreground: "var(--ds-accent-foreground)",
         },
       },
       borderRadius: {
