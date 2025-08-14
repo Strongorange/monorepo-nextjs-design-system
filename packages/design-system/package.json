@@ -11,6 +11,7 @@
       "require": "./dist/index.js"
     },
     "./styles": "./dist/styles.css",
+    "./styles.isolated": "./dist/styles.css",
     "./tailwind.config": "./tailwind.config.js"
   },
   "files": [
@@ -23,8 +24,14 @@
     "dist/styles.css"
   ],
   "scripts": {
-    "build": "tsup && postcss src/styles.css -o dist/styles.css",
+    "build": "tsup",
+    "build:test": "npm run build && node build/test-build.js",
     "dev": "tsup --watch",
+    "extract-classes": "node build/extract-classes.js",
+    "extract-classes:verbose": "node build/extract-classes.js --verbose",
+    "extract-classes:save": "node build/extract-classes.js --output build/extraction-results.json --verbose",
+    "build-integration": "node build/build-integration.js",
+    "test-extractor": "node build/test-extractor.js",
     "prepublishOnly": "npm run build",
     "publish:gh": "npm publish --registry=https://npm.pkg.github.com",
     "release:patch": "npm version patch && npm run build && npm run publish:gh",
@@ -41,8 +48,15 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "autoprefixer": "^10.4.16",
+    "cssnano": "^7.1.0",
+    "glob": "^11.0.3",
     "postcss": "^8.4.31",
     "postcss-cli": "^11.0.0",
+    "postcss-discard-duplicates": "^7.0.2",
+    "postcss-merge-rules": "^7.0.6",
+    "postcss-prefixwrap": "^1.51.0",
+    "postcss-selector-parser": "^6.0.13",
+    "postcss-uncss": "^0.17.0",
     "tailwindcss": "^3.3.5",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
