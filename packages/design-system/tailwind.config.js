@@ -20,6 +20,15 @@ const designSystemConfig = {
           DEFAULT: "var(--ds-destructive)",
           foreground: "var(--ds-destructive-foreground)",
         },
+        success: {
+          DEFAULT: "var(--ds-success)",
+          foreground: "var(--ds-success-foreground)",
+        },
+        warning: {
+          DEFAULT: "var(--ds-warning)",
+          foreground: "var(--ds-warning-foreground)",
+        },
+        disabled: "var(--ds-disabled-foreground)",
         muted: {
           DEFAULT: "var(--ds-muted)",
           foreground: "var(--ds-muted-foreground)",

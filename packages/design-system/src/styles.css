@@ -10,9 +10,12 @@
     --ds-popover: #ffffff;
 
     --ds-primary: #0172fe; /* blue/500 */
+    --ds-primary-hover: #0167e5; /* blue/600 */
+    --ds-primary-active: #014498; /* blue/700 */
     --ds-primary-foreground: #ffffff;
 
     --ds-secondary: #fbfcfd; /* neutral/100 */
+    --ds-secondary-hover: #f7f8f9; /* neutral/200 */
     --ds-secondary-foreground: #1e2022;
 
     --ds-muted: #f7f8f9; /* neutral/200 */
@@ -22,11 +25,12 @@
     --ds-accent-foreground: #ffffff;
 
     --ds-destructive: #f83b68; /* pink/500 */
+    --ds-destructive-hover: #fe5b7e; /* pink/400 */
     --ds-destructive-foreground: #ffffff;
 
     --ds-border: #e9ebee; /* neutral/300 */
     --ds-input: #e9ebee;
-    --ds-ring: #0172fe;
+    --ds-ring: #4d9cfe; /* blue/400 */
 
     --ds-radius: 0.5rem;
   }
@@ -38,9 +42,12 @@
     --ds-popover: #ffffff;
 
     --ds-primary: #0172fe;
+    --ds-primary-hover: #0167e5;
+    --ds-primary-active: #014498;
     --ds-primary-foreground: #ffffff;
 
     --ds-secondary: #fbfcfd;
+    --ds-secondary-hover: #f7f8f9;
     --ds-secondary-foreground: #1e2022;
 
     --ds-muted: #f7f8f9;
@@ -50,11 +57,12 @@
     --ds-accent-foreground: #ffffff;
 
     --ds-destructive: #f83b68;
+    --ds-destructive-hover: #fe5b7e;
     --ds-destructive-foreground: #ffffff;
 
     --ds-border: #e9ebee;
     --ds-input: #e9ebee;
-    --ds-ring: #0172fe;
+    --ds-ring: #4d9cfe;
 
     --ds-radius: 0.5rem;
   }
@@ -66,9 +74,12 @@
     --ds-popover: #1e2022;
 
     --ds-primary: #0172fe;
+    --ds-primary-hover: #4d9cfe; /* lighter on dark */
+    --ds-primary-active: #0167e5;
     --ds-primary-foreground: #ffffff;
 
     --ds-secondary: #3d4044; /* neutral/700 */
+    --ds-secondary-hover: #53585c; /* neutral/600 */
     --ds-secondary-foreground: #ffffff;
 
     --ds-muted: #2e3236;
@@ -78,6 +89,7 @@
     --ds-accent-foreground: #ffffff;
 
     --ds-destructive: #f83b68;
+    --ds-destructive-hover: #fe5b7e;
     --ds-destructive-foreground: #ffffff;
 
     --ds-border: #3d4044;
@@ -92,9 +104,12 @@
     --ds-popover: #1e2022;
 
     --ds-primary: #0172fe;
+    --ds-primary-hover: #4d9cfe;
+    --ds-primary-active: #0167e5;
     --ds-primary-foreground: #ffffff;
 
     --ds-secondary: #3d4044;
+    --ds-secondary-hover: #53585c;
     --ds-secondary-foreground: #ffffff;
 
     --ds-muted: #2e3236;
@@ -104,6 +119,7 @@
     --ds-accent-foreground: #ffffff;
 
     --ds-destructive: #f83b68;
+    --ds-destructive-hover: #fe5b7e;
     --ds-destructive-foreground: #ffffff;
 
     --ds-border: #3d4044;
