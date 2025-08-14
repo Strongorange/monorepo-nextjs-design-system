@@ -1,6 +1,6 @@
 {
-  "name": "@design-system-test/ui",
-  "version": "0.1.0",
+  "name": "@strongorange/ds-ui",
+  "version": "0.1.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -15,6 +15,12 @@
   },
   "files": [
     "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "sideEffects": [
+    "dist/styles.css"
   ],
   "scripts": {
     "build": "tsup && postcss src/styles.css -o dist/styles.css",

@@ -1,6 +1,11 @@
 # Dependencies
 node_modules/
 
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
 # Development
 .turbo/
 
@@ -26,3 +31,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Local only auth/config
+.npmrc
