@@ -66,6 +66,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(
+          "ds-ui ds-ui ds-ui ds-ui ds-ui", // 매우 높은 특이성을 위해 5번 반복
           "ds-Button",
           buttonVariants({ variant, size, className })
         )}
