@@ -1,5 +1,5 @@
-import type { Preview } from "@storybook/react";
-import "@design-system-test/ui/styles";
+import type { Preview } from "@storybook/react-vite";
+import "@strongorange/ds-ui/styles";
 
 const preview: Preview = {
   parameters: {

@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@design-system-test/ui";
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Button } from "@strongorange/ds-ui";
 
 const meta = {
   title: "UI/Button",
