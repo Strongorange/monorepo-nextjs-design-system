@@ -41,5 +41,16 @@ export {
   AccordionContent,
 } from "./components/ui/accordion";
 
+// Breadcrumb Components
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbEllipsis,
+  BreadcrumbPage,
+} from "./components/ui/breadcrumb";
+
 // Utils - 필수 유틸리티만
 export { cn } from "./lib/utils";
