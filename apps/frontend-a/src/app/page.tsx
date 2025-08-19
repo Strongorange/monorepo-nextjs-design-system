@@ -1,4 +1,13 @@
-import { Button } from "@strongorange/ds-ui";
+import {
+  Button,
+  Card,
+  CardHeader,
+  CardTitle,
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@strongorange/ds-ui";
 
 export default function Home() {
   return (
@@ -57,6 +66,25 @@ export default function Home() {
           <Button size="lg">Large</Button>
           <Button size="icon">🚀</Button>
         </div>
+
+        <h2>Shadcn UI v2</h2>
+        <div>
+          <Card className="w-[300px] bg-primary">
+            <CardHeader>
+              <CardTitle>Card Title</CardTitle>
+            </CardHeader>
+          </Card>
+        </div>
+
+        <h2>Accordion</h2>
+        <Accordion type="single" collapsible className="w-[300px]">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </main>
     </div>
   );

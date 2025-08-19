@@ -1,5 +1,8 @@
 @config "../tailwind.config.js";
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 /*
  @theme 을 디자인 토큰을 Tailwind에 직접 주입
@@ -39,6 +42,33 @@
   --radius-ds: 0.5rem;
 }
 
+/* Shadcn UI v2 @theme inline 매핑 - Tailwind 클래스에서 직접 사용 가능 */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
 /**
 @layer base - CSS 변수 매핑
 토큰을 런타임 CSS 변수로 변환하여 모든 컴포넌트에서 사용 가능
@@ -62,6 +92,7 @@
 */
 @layer base {
   :root {
+    /* 기존 디자인 시스템 변수 유지 */
     --ds-background: var(--color-ds-background);
     --ds-foreground: var(--color-ds-foreground);
     --ds-card: var(--color-ds-card);
@@ -91,9 +122,32 @@
     --ds-ring: var(--color-ds-ring);
 
     --ds-radius: var(--radius-ds);
+
+    /* Shadcn UI 호환성을 위한 변수 매핑 */
+    --background: var(--color-ds-background);
+    --foreground: var(--color-ds-foreground);
+    --card: var(--color-ds-card);
+    --card-foreground: var(--color-ds-foreground);
+    --popover: var(--color-ds-popover);
+    --popover-foreground: var(--color-ds-foreground);
+    --primary: var(--color-ds-primary);
+    --primary-foreground: var(--color-ds-primary-foreground);
+    --secondary: var(--color-ds-secondary);
+    --secondary-foreground: var(--color-ds-secondary-foreground);
+    --muted: var(--color-ds-muted);
+    --muted-foreground: var(--color-ds-muted-foreground);
+    --accent: var(--color-ds-accent);
+    --accent-foreground: var(--color-ds-accent-foreground);
+    --destructive: var(--color-ds-destructive);
+    --destructive-foreground: var(--color-ds-destructive-foreground);
+    --border: var(--color-ds-border);
+    --input: var(--color-ds-input);
+    --ring: var(--color-ds-ring);
+    --radius: var(--radius-ds);
   }
 
   .dark {
+    /* 기존 디자인 시스템 다크모드 변수 유지 */
     --ds-background: #1e2022;
     --ds-foreground: #ffffff;
     --ds-card: #1e2022;
@@ -121,5 +175,35 @@
     --ds-border: #3d4044;
     --ds-input: #3d4044;
     --ds-ring: #4d9cfe; /* blue/400 */
+
+    /* Shadcn UI 호환성을 위한 다크모드 변수 매핑 */
+    --background: #1e2022;
+    --foreground: #ffffff;
+    --card: #1e2022;
+    --card-foreground: #ffffff;
+    --popover: #1e2022;
+    --popover-foreground: #ffffff;
+    --primary: #0172fe;
+    --primary-foreground: #ffffff;
+    --secondary: #3d4044;
+    --secondary-foreground: #ffffff;
+    --muted: #2e3236;
+    --muted-foreground: #b3bac2;
+    --accent: #977aec;
+    --accent-foreground: #ffffff;
+    --destructive: #f83b68;
+    --destructive-foreground: #ffffff;
+    --border: #3d4044;
+    --input: #3d4044;
+    --ring: #4d9cfe;
+  }
+
+  /* Shadcn UI 필수 기본 스타일 */
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }

@@ -6,5 +6,40 @@ export type {
   ButtonSize,
 } from "./components/ui/button";
 
+// Card Components
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardAction,
+  CardDescription,
+  CardContent,
+} from "./components/ui/card";
+
+// Input Component
+export { Input } from "./components/ui/input";
+
+// Dialog Components
+export {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogOverlay,
+  DialogPortal,
+  DialogTitle,
+  DialogTrigger,
+} from "./components/ui/dialog";
+
+// Accordion Components
+export {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "./components/ui/accordion";
+
 // Utils - 필수 유틸리티만
 export { cn } from "./lib/utils";

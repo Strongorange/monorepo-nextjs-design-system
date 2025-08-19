@@ -38,6 +38,14 @@ const designSystemConfig = {
           DEFAULT: "var(--ds-accent)",
           foreground: "var(--ds-accent-foreground)",
         },
+        card: {
+          DEFAULT: "var(--ds-card)",
+          foreground: "var(--ds-foreground)",
+        },
+        popover: {
+          DEFAULT: "var(--ds-popover)",
+          foreground: "var(--ds-foreground)",
+        },
       },
       borderRadius: {
         lg: "var(--ds-radius)",
