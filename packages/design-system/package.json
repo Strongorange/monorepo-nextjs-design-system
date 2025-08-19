@@ -1,0 +1,68 @@
+{
+  "name": "@strongorange/ds-ui",
+  "version": "0.1.11",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./styles": "./dist/styles.css",
+    "./tailwind.preset": "./tailwind.preset.js"
+  },
+  "files": [
+    "dist",
+    "tailwind.preset.js"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "sideEffects": [
+    "dist/styles.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:test": "npm run build && node build/test-build.js",
+    "dev": "tsup --watch",
+    "extract-classes": "node build/extract-classes.js",
+    "extract-classes:verbose": "node build/extract-classes.js --verbose",
+    "extract-classes:save": "node build/extract-classes.js --output build/extraction-results.json --verbose",
+    "build-integration": "node build/build-integration.js",
+    "test-extractor": "node build/test-extractor.js",
+    "prepublishOnly": "npm run build",
+    "publish:gh": "npm publish --registry=https://npm.pkg.github.com",
+    "release:patch": "npm version patch && npm run build && npm run publish:gh",
+    "release:minor": "npm version minor && npm run build && npm run publish:gh",
+    "release:major": "npm version major && npm run build && npm run publish:gh"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "cssnano": "^7.1.0",
+    "glob": "^11.0.3",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^11.0.0",
+    "postcss-discard-duplicates": "^7.0.2",
+    "postcss-merge-rules": "^7.0.6",
+    "postcss-prefixwrap": "^1.51.0",
+    "postcss-selector-parser": "^6.0.13",
+    "postcss-uncss": "^0.17.0",
+    "tailwindcss": "^4.1.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  }
+}

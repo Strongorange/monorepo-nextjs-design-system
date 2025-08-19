@@ -1,0 +1,99 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+@theme {
+  /* Design System Colors */
+  --color-ds-background: #fefefe; /* neutral/50 */
+  --color-ds-foreground: #1e2022; /* neutral/800 */
+  --color-ds-card: #ffffff;
+  --color-ds-popover: #ffffff;
+
+  --color-ds-primary: #0172fe; /* blue/500 */
+  --color-ds-primary-hover: #0167e5; /* blue/600 */
+  --color-ds-primary-active: #014498; /* blue/700 */
+  --color-ds-primary-foreground: #ffffff;
+
+  --color-ds-secondary: #fbfcfd; /* neutral/100 */
+  --color-ds-secondary-hover: #f7f8f9; /* neutral/200 */
+  --color-ds-secondary-foreground: #1e2022;
+
+  --color-ds-muted: #f7f8f9; /* neutral/200 */
+  --color-ds-muted-foreground: #53585c; /* neutral/600 */
+
+  --color-ds-accent: #a670eb; /* purple/500 */
+  --color-ds-accent-foreground: #ffffff;
+
+  --color-ds-destructive: #f83b68; /* pink/500 */
+  --color-ds-destructive-hover: #fe5b7e; /* pink/400 */
+  --color-ds-destructive-foreground: #ffffff;
+
+  --color-ds-border: #e9ebee; /* neutral/300 */
+  --color-ds-input: #e9ebee;
+  --color-ds-ring: #4d9cfe; /* blue/400 */
+
+  --radius-ds: 0.5rem;
+}
+
+@layer base {
+  :root {
+    --ds-background: var(--color-ds-background);
+    --ds-foreground: var(--color-ds-foreground);
+    --ds-card: var(--color-ds-card);
+    --ds-popover: var(--color-ds-popover);
+
+    --ds-primary: var(--color-ds-primary);
+    --ds-primary-hover: var(--color-ds-primary-hover);
+    --ds-primary-active: var(--color-ds-primary-active);
+    --ds-primary-foreground: var(--color-ds-primary-foreground);
+
+    --ds-secondary: var(--color-ds-secondary);
+    --ds-secondary-hover: var(--color-ds-secondary-hover);
+    --ds-secondary-foreground: var(--color-ds-secondary-foreground);
+
+    --ds-muted: var(--color-ds-muted);
+    --ds-muted-foreground: var(--color-ds-muted-foreground);
+
+    --ds-accent: var(--color-ds-accent);
+    --ds-accent-foreground: var(--color-ds-accent-foreground);
+
+    --ds-destructive: var(--color-ds-destructive);
+    --ds-destructive-hover: var(--color-ds-destructive-hover);
+    --ds-destructive-foreground: var(--color-ds-destructive-foreground);
+
+    --ds-border: var(--color-ds-border);
+    --ds-input: var(--color-ds-input);
+    --ds-ring: var(--color-ds-ring);
+
+    --ds-radius: var(--radius-ds);
+  }
+
+  .dark {
+    --ds-background: #1e2022;
+    --ds-foreground: #ffffff;
+    --ds-card: #1e2022;
+    --ds-popover: #1e2022;
+
+    --ds-primary: #0172fe;
+    --ds-primary-hover: #4d9cfe; /* lighter on dark */
+    --ds-primary-active: #0167e5;
+    --ds-primary-foreground: #ffffff;
+
+    --ds-secondary: #3d4044; /* neutral/700 */
+    --ds-secondary-hover: #53585c; /* neutral/600 */
+    --ds-secondary-foreground: #ffffff;
+
+    --ds-muted: #2e3236;
+    --ds-muted-foreground: #b3bac2;
+
+    --ds-accent: #977aec; /* purple/400 */
+    --ds-accent-foreground: #ffffff;
+
+    --ds-destructive: #f83b68;
+    --ds-destructive-hover: #fe5b7e;
+    --ds-destructive-foreground: #ffffff;
+
+    --ds-border: #3d4044;
+    --ds-input: #3d4044;
+    --ds-ring: #4d9cfe; /* blue/400 */
+  }
+}
