@@ -8,7 +8,10 @@
     "dev": "pnpm --parallel --filter=\"./apps/*\" dev",
     "dev:a": "pnpm --filter=\"./apps/frontend-a\" dev",
     "build": "pnpm --filter=\"./packages/*\" build && pnpm --filter=\"./apps/*\" build",
-    "storybook": "pnpm --filter storybook storybook"
+    "storybook": "pnpm --filter storybook storybook",
+    "release:patch": "source .env && pnpm --filter=\"./packages/design-system\" release:patch",
+    "release:minor": "source .env && pnpm --filter=\"./packages/design-system\" release:minor",
+    "release:major": "source .env && pnpm --filter=\"./packages/design-system\" release:major"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
