@@ -10,12 +10,10 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
-    "./styles": "./dist/styles.css",
-    "./tailwind.preset": "./tailwind.preset.js"
+    "./styles": "./dist/styles.css"
   },
   "files": [
-    "dist",
-    "tailwind.preset.js"
+    "dist"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

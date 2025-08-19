@@ -1,6 +1,11 @@
 @config "../tailwind.config.js";
 @import "tailwindcss";
 
+/*
+ @theme 을 디자인 토큰을 Tailwind에 직접 주입
+모든 디자인 데이터의 단일 진실 원천 
+빌드 타임에 이 값들이 Tailwind 클래스로 변환되어 런타임에 적용됨
+*/
 @theme {
   /* Design System Colors */
   --color-ds-background: #fefefe; /* neutral/50 */
@@ -34,6 +39,27 @@
   --radius-ds: 0.5rem;
 }
 
+/**
+@layer base - CSS 변수 매핑
+토큰을 런타임 CSS 변수로 변환하여 모든 컴포넌트에서 사용 가능
+
+:root - 모든 컴포넌트에서 사용 가능한 전역 범위
+위에서 정의한 디자인 토큰을 런타임 CSS 변수로 변환하여 모든 컴포넌트에서 사용 가능
+
+@theme {
+  --color-ds-primary: #0172fe;  원시 토큰 (불변)
+}
+
+@layer base {
+  :root {
+    --ds-primary: var(--color-ds-primary); 런타임 변수, --ds-primary 라는 변수값으로 디자인 토큰의 값을 할당
+  }
+  
+  .dark {
+    --ds-primary: #4d9cfe;  다크모드에서 오버라이드
+  }
+}
+*/
 @layer base {
   :root {
     --ds-background: var(--color-ds-background);
