@@ -34,9 +34,11 @@ export type DsButtonVariant = "primary" | "secondary" | "destructive";
 
 export type DsButtonSize = "default" | "sm" | "lg" | "icon";
 
+export type DsButtonVariantProps = VariantProps<typeof dsButtonVariants>;
+
 export interface DsButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof dsButtonVariants> {
+    DsButtonVariantProps {
   asChild?: boolean;
 }
 

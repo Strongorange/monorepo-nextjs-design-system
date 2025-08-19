@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
+  DsButton,
 } from "@strongorange/ds-ui";
 
 export default function Home() {
@@ -85,6 +86,13 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+
+        <h2>DSButton</h2>
+        <DsButton>기본</DsButton>
+        <DsButton variant="secondary">Secondary</DsButton>
+        <DsButton asChild>
+          <a>링크 슬롯</a>
+        </DsButton>
       </main>
     </div>
   );
