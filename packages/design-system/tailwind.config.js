@@ -47,6 +47,23 @@ const designSystemConfig = {
           foreground: "var(--ds-foreground)",
         },
       },
+      fontFamily: {
+        pretendard: [
+          "Pretendard Variable",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "'Segoe UI'",
+          "Roboto",
+          "'Helvetica Neue'",
+          "Arial",
+          "'Noto Sans KR'",
+          "sans-serif",
+          "'Apple Color Emoji'",
+          "'Segoe UI Emoji'",
+          "'Segoe UI Symbol'",
+          "'Noto Color Emoji'",
+        ],
+      },
       borderRadius: {
         lg: "var(--ds-radius)",
         md: "calc(var(--ds-radius) - 2px)",
