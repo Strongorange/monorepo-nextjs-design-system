@@ -45,6 +45,20 @@ const designSystemConfig = {
           DEFAULT: "var(--ds-popover)",
           foreground: "var(--ds-foreground)",
         },
+
+        /* 피그마 디자인 컬러 스케일 */
+        neutral: {
+          50: "var(--neutral-50)",
+          900: "var(--neutral-900)",
+        },
+
+        material: {
+          button: {
+            brand: "#ff5c00",
+            black: "#000000",
+            white: "#ffffff",
+          },
+        },
       },
       fontFamily: {
         pretendard: [
@@ -91,29 +105,29 @@ module.exports = {
     preflight: false,
   },
   plugins: [],
-  safelist: [
-    // Ensure opacity modifier classes are included
-    "hover:bg-primary/90",
-    "hover:bg-destructive/90",
-    "hover:bg-secondary/80",
-    // Add other opacity modifiers that might be used
-    "bg-primary/90",
-    "bg-destructive/90",
-    "bg-secondary/80",
-    "bg-accent/90",
-    "text-primary/90",
-    "text-destructive/90",
-    "border-primary/90",
-    // Add pattern-based safelist for opacity modifiers
-    {
-      pattern: /bg-(primary|secondary|destructive|accent)\/\d+/,
-      variants: ["hover", "focus", "active"],
-    },
-    {
-      pattern: /text-(primary|secondary|destructive|accent)-foreground/,
-      variants: ["hover", "focus", "active"],
-    },
-  ],
+  // safelist: [
+  //   // Ensure opacity modifier classes are included
+  //   "hover:bg-primary/90",
+  //   "hover:bg-destructive/90",
+  //   "hover:bg-secondary/80",
+  //   // Add other opacity modifiers that might be used
+  //   "bg-primary/90",
+  //   "bg-destructive/90",
+  //   "bg-secondary/80",
+  //   "bg-accent/90",
+  //   "text-primary/90",
+  //   "text-destructive/90",
+  //   "border-primary/90",
+  //   // Add pattern-based safelist for opacity modifiers
+  //   {
+  //     pattern: /bg-(primary|secondary|destructive|accent)\/\d+/,
+  //     variants: ["hover", "focus", "active"],
+  //   },
+  //   {
+  //     pattern: /text-(primary|secondary|destructive|accent)-foreground/,
+  //     variants: ["hover", "focus", "active"],
+  //   },
+  // ],
 };
 
 // 설정을 외부에서 사용할 수 있도록 내보내기

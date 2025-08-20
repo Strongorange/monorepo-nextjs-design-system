@@ -42,6 +42,30 @@
   --color-ds-ring: #4d9cfe; /* blue/400 */
 
   --radius-ds: 0.5rem;
+
+  /* 피그마 디자인 토큰 컬러 스케일 blue */
+  --color-ds-blue-50: #f2f8ff;
+  --color-ds-blue-100: #e6f1ff;
+  --color-ds-blue-200: #c0dcff;
+  --color-ds-blue-300: #99c7ff;
+  --color-ds-blue-400: #4d9cfe;
+  --color-ds-blue-500: #0172fe;
+  --color-ds-blue-600: #0167e5;
+  --color-ds-blue-700: #014498;
+  --color-ds-blue-800: #00224c;
+  --color-ds-blue-900: #000033;
+
+  /* 피그마 디자인 토큰 컬러 스케일 neutral */
+  --neutral-50: #fefefe;
+  --neutral-100: #fbfcfd;
+  --neutral-200: #f7f8f9;
+  --neutral-300: #e9ebee;
+  --neutral-400: #c5c8ce;
+  --neutral-500: #7d8084;
+  --neutral-600: #53585c;
+  --neutral-700: #3d4044;
+  --neutral-800: #1e2022;
+  --neutral-900: #141515;
 }
 
 /**
@@ -119,6 +143,17 @@
     --input: var(--color-ds-input);
     --ring: var(--color-ds-ring);
     --radius: var(--radius-ds);
+
+    /* 피그마 디자인 토큰 */
+    --neutral-50: var(--neutral-50);
+    --neutral-900: var(--neutral-900);
+
+    /* 피그마 디자인 토큰 컬러 시맨틱 Light */
+    --color-semantic-material-button-brand-default: var(--color-ds-blue-500);
+    --color-semantic-material-button-brand-hover: var(--color-ds-blue-600);
+    --color-semantic-material-button-brand-focus: var(--color-ds-blue-700);
+    /* #F7F8F9 · 30% 로 아래 색 변경 */
+    --color-semantic-material-button-brand-disable: var(--color-ds-blue-500);
   }
 
   .dark {
