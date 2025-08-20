@@ -17,7 +17,9 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      // lucide-react 타입 에러 해결을 위함
+      "react": ["./node_modules/@types/react"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],

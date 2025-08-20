@@ -6,6 +6,14 @@ export type {
   ButtonSize,
 } from "./components/ui/button";
 
+// DsButton Components
+export { DsButton } from "./components/ui/ds-button";
+export type {
+  DsButtonProps,
+  DsButtonVariant,
+  DsButtonSize,
+} from "./components/ui/ds-button";
+
 // Card Components
 export {
   Card,
