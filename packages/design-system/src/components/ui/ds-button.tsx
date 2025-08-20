@@ -37,10 +37,17 @@ export type DsButtonSize = 'default' | 'sm' | 'lg' | 'icon';
 export type DsButtonVariantProps = VariantProps<typeof dsButtonVariants>;
 
 export interface DsButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    DsButtonVariantProps {
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'size'> {
   asChild?: boolean;
+  variant?: DsButtonVariant;
+  size?: DsButtonSize;
 }
+
+// export interface DsButtonProps
+//   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'size'>,
+//     DsButtonVariantProps {
+//   asChild?: boolean;
+// }
 
 const DsButton = React.forwardRef<HTMLButtonElement, DsButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {

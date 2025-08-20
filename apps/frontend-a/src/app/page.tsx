@@ -71,16 +71,16 @@ export default function Home() {
         <h2>Shadcn UI v2</h2>
         <div>
           <Card className="w-[300px] bg-primary">
-            <CardHeader className="bg-red-500">
-              <CardTitle className="bg-blue-500">Card Title</CardTitle>
+            <CardHeader className="">
+              <CardTitle className="">Card Title</CardTitle>
             </CardHeader>
           </Card>
         </div>
 
         <h2>Accordion</h2>
         <Accordion type="single" collapsible className="w-[300px]">
-          <AccordionItem value="item-1" className="bg-red-500">
-            <AccordionTrigger className="bg-blue-500">
+          <AccordionItem value="item-1" className="">
+            <AccordionTrigger className="">
               Is it accessible?
             </AccordionTrigger>
             <AccordionContent className="bg-green-500">
@@ -91,14 +91,15 @@ export default function Home() {
 
         <h2>DSButton</h2>
         <DsButton>기본</DsButton>
-        <DsButton variant="secondary">Secondary</DsButton>
-        <DsButton asChild>
+        <DsButton>
+          Secondary
+        </DsButton>
+        <Button variant={"destructive"} size={"lg"}>테스트</Button>
+        <DsButton variant={"secondary"} size={"icon"}  asChild>
           <a>링크 슬롯</a>
         </DsButton>
 
-        <div className="text-center bg-red-500 text-white p-4 w-full rounded-md ">
-          plugin 테스트
-        </div>
+        
       </main>
     </div>
   );
