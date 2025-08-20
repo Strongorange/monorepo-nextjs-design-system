@@ -1,12 +1,5 @@
 import {
   Button,
-  Card,
-  CardHeader,
-  CardTitle,
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
   DsButton,
 } from "@strongorange/ds-ui";
 
@@ -68,38 +61,14 @@ export default function Home() {
           <Button size="icon">🚀</Button>
         </div>
 
-        <h2>Shadcn UI v2</h2>
-        <div>
-          <Card className="w-[300px] bg-primary">
-            <CardHeader className="">
-              <CardTitle className="">Card Title</CardTitle>
-            </CardHeader>
-          </Card>
-        </div>
 
-        <h2>Accordion</h2>
-        <Accordion type="single" collapsible className="w-[300px]">
-          <AccordionItem value="item-1" className="">
-            <AccordionTrigger className="">
-              Is it accessible?
-            </AccordionTrigger>
-            <AccordionContent className="bg-green-500">
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-
+      <div style={{display: "flex", flexDirection: "column", gap: 8, width: "100%"}} >
         <h2>DSButton</h2>
-        <DsButton>기본</DsButton>
-        <DsButton>
-          Secondary
-        </DsButton>
-        <Button variant={"destructive"} size={"lg"}>테스트</Button>
-        <DsButton variant={"secondary"} size={"icon"}  asChild>
-          <a>링크 슬롯</a>
-        </DsButton>
-
-        
+        <DsButton>medium</DsButton>
+        <DsButton size="small">small</DsButton>
+        <DsButton size="large">large</DsButton>
+        <DsButton size="xlarge">xlarge</DsButton>
+      </div>
       </main>
     </div>
   );

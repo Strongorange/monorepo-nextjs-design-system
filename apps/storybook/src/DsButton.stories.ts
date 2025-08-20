@@ -11,15 +11,14 @@ const meta = {
   argTypes: {
     variant: {
       control: { type: "select" },
-      options: [
-        "primary",
-        "secondary",
-        "destructive",
-      ],
+      options: ["primary", "secondary", "assistive"],
     },
     size: {
       control: { type: "select" },
-      options: ["default", "sm", "lg", "icon"],
+      options: ["medium", "small", "large", "xlarge"],
+    },
+    fullWidth: {
+      control: { type: "boolean" },
     },
   },
 } satisfies Meta<typeof DsButton>;
@@ -41,23 +40,37 @@ export const Secondary: Story = {
   },
 };
 
-export const Destructive: Story = {
+export const Assistive: Story = {
   args: {
-    variant: "destructive",
+    variant: "assistive",
     children: "DsButton",
   },
 };
 
 export const Small: Story = {
   args: {
-    size: "sm",
+    size: "small",
+    children: "DsButton",
+  },
+};
+
+export const Medium: Story = {
+  args: {
+    size: "medium",
     children: "DsButton",
   },
 };
 
 export const Large: Story = {
   args: {
-    size: "lg",
+    size: "large",
+    children: "DsButton",
+  },
+};
+
+export const XLarge: Story = {
+  args: {
+    size: "xlarge",
     children: "DsButton",
   },
 };

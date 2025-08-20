@@ -1,4 +1,3 @@
-// packages/design-system/tailwind.config.js
 const designSystemConfig = {
   important: true,
   theme: {
@@ -68,6 +67,17 @@ const designSystemConfig = {
         lg: "var(--ds-radius)",
         md: "calc(var(--ds-radius) - 2px)",
         sm: "calc(var(--ds-radius) - 4px)",
+      },
+      spacing: {
+        "3x-large": "64px",
+        "2x-large": "32px",
+        "x-large": "24px",
+        large: "20px",
+        medium: "16px",
+        small: "12px",
+        "x-small": "8px",
+        "2x-small": "4px",
+        "3x-small": "2px",
       },
     },
   },
