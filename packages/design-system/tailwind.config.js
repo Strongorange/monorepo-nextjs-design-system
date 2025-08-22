@@ -46,14 +46,26 @@ const designSystemConfig = {
           foreground: "var(--ds-foreground)",
         },
 
+        "brand-primary": {
+          normal: "var(--color-semantic-brand-primary-normal)",
+          strong: "var(--color-semantic-brand-primary-strong)",
+          heavy: "var(--color-semantic-brand-primary-heavy)",
+          bw: "var(--color-semantic-brand-primary-bw)",
+        },
+
         /* 피그마 컬러 시맨틱 Material */
         material: {
           label: {
             black: {
+              strong: "var(--color-semantic-material-label-black-strong)",
+              normal: "var(--color-semantic-material-label-black-normal)",
+              neutral: "var(--color-semantic-material-label-black-neutral)",
               disabled: "var(--color-semantic-material-label-black-disabled)",
             },
             white: {
               strong: "var(--color-semantic-material-label-white-strong)",
+              normal: "var(--color-semantic-material-label-white-normal)",
+              neutral: "var(--color-semantic-material-label-white-neutral)",
               disabled: "var(--color-semantic-material-label-white-disabled)",
             },
           },
@@ -76,7 +88,18 @@ const designSystemConfig = {
               focus: "var(--color-semantic-material-button-black-focus)",
               disable: "var(--color-semantic-material-button-black-disable)",
             },
-            white: "#ffffff",
+            white: {
+              DEFAULT: "var(--color-semantic-material-button-white-default)",
+              hover: "var(--color-semantic-material-button-white-hover)",
+              focus: "var(--color-semantic-material-button-white-focus)",
+              disable: "var(--color-semantic-material-button-white-disable)",
+            },
+          },
+          border: {
+            weak: "var(--color-semantic-material-border-weak)",
+            normal: "var(--color-semantic-material-border-normal)",
+            strong: "var(--color-semantic-material-border-strong)",
+            focused: "var(--color-semantic-material-border-focused)",
           },
         },
       },

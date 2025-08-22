@@ -52,11 +52,11 @@
   --color-ds-material-label-white-disabled-light: oklch(0.997 0 0 / 0.5);
   --color-ds-material-label-white-disabled-dark: oklch(0.2809 0 0 / 0.5);
 
-  /* 피그마 디자인 토큰 컬러 스케일 static */
-  --color-ds-static-white: #ffffff;
-  --color-ds-white: #fefefe;
-  --color-ds-black: #292929;
-  --color-ds-static-black: #000000;
+  /* 피그마 디자인 토큰 컬러 스케일 Primary static */
+  --color-ds-primary-static-white: #ffffff;
+  --color-ds-primary-white: #fefefe;
+  --color-ds-primary-black: #292929;
+  --color-ds-primary-static-black: #000000;
 
   /* 피그마 디자인 토큰 컬러 스케일 blue */
   --color-ds-blue: #0172fe;
@@ -160,19 +160,40 @@
     --ring: var(--color-ds-ring);
     --radius: var(--radius-ds);
 
+    /* 피그마 컬러 시맨틱 Brand Primary Light */
+    --color-semantic-brand-primary-normal: var(--color-ds-blue-500);
+    --color-semantic-brand-primary-strong: var(--color-ds-blue-600);
+    --color-semantic-brand-primary-heavy: var(--color-ds-blue-700);
+    --color-semantic-brand-primary-bw: var(--color-ds-primary-black);
+
     /* 피그마 컬러 시맨틱 Fill */
     --color-semantic-fill-weak: var(--color-ds-neutral-100);
     --color-semantic-fill-normal: var(--color-ds-neutral-200);
     --color-semantic-fill-strong: var(--color-ds-neutral-300);
     --color-semantic-fill-deep: var(--color-ds-neutral-400);
 
-    /* 피그마 컬러 시맨틱 Material Label White */
-    --color-semantic-material-label-white-strong: var(--color-ds-static-white);
+    /* 피그마 컬러 시맨틱 Material Label White Light */
+    --color-semantic-material-label-white-strong: var(
+      --color-ds-primary-static-white
+    );
+    --color-semantic-material-label-white-normal: var(--color-ds-primary-white);
+    --color-semantic-material-label-white-neutral: var(--color-ds-neutral-400);
+    --color-semantic-material-label-white-assistive: var(
+      --color-ds-neutral-500
+    );
     --color-semantic-material-label-white-disabled: var(
       --color-ds-material-label-white-disabled-light
     );
 
-    /* 피그마 컬러 시맨틱 Material Label Black */
+    /* 피그마 컬러 시맨틱 Material Label Black Light*/
+    --color-semantic-material-label-black-strong: var(
+      --color-ds-primary-static-black
+    );
+    --color-semantic-material-label-black-normal: var(--color-ds-primary-black);
+    --color-semantic-material-label-black-neutral: var(--color-ds-neutral-600);
+    --color-semantic-material-label-black-assistive: var(
+      --color-ds-neutral-400
+    );
     --color-semantic-material-label-black-disabled: var(
       --color-ds-material-label-black-disabled-light
     );
@@ -190,6 +211,18 @@
     --color-semantic-material-button-black-hover: var(--color-ds-neutral-700);
     --color-semantic-material-button-black-focus: var(--color-ds-neutral-500);
     --color-semantic-material-button-black-disable: #f7f8f9;
+
+    /* 피그마 컬러 시맨틱 Material Button White Light */
+    --color-semantic-material-button-white-default: var(--color-ds-neutral-50);
+    --color-semantic-material-button-white-hover: var(--color-ds-neutral-300);
+    --color-semantic-material-button-white-focus: var(--color-ds-neutral-400);
+    --color-semantic-material-button-white-disable: #f7f8f9;
+
+    /* 피그마 컬러 시맨틱 Material Border Light */
+    --color-semantic-material-border-weak: var(--color-ds-neutral-200);
+    --color-semantic-material-border-normal: var(--color-ds-neutral-300);
+    --color-semantic-material-border-strong: var(--color-ds-neutral-400);
+    --color-semantic-material-border-focused: var(--color-ds-primary-black);
   }
 
   .dark {
@@ -243,6 +276,12 @@
     --input: #3d4044;
     --ring: #4d9cfe;
 
+    /* 피그마 컬러 시맨틱 Brand Primary Dark */
+    --color-semantic-brand-primary-normal: var(--color-ds-blue-400);
+    --color-semantic-brand-primary-strong: var(--color-ds-blue-500);
+    --color-semantic-brand-primary-heavy: var(--color-ds-blue-600);
+    --color-semantic-brand-primary-bw: var(--color-ds-primary-white);
+
     /* 피그마 컬러 시맨틱 Fill */
     --color-semantic-fill-weak: var(--color-ds-neutral-800);
     --color-semantic-fill-normal: var(--color-ds-neutral-700);
@@ -263,24 +302,42 @@
     --color-semantic-material-button-black-focus: var(--color-ds-neutral-400);
     --color-semantic-material-button-black-disable: #28323c;
 
-    /* 피그마 컬러 시맨틱 Label White */
-    --color-semantic-material-label-white-strong: var(--color-ds-static-black);
+    /* 피그마 컬러 시맨틱 Material Button White Dark */
+    --color-semantic-material-button-white-default: var(--color-ds-neutral-900);
+    --color-semantic-material-button-white-hover: var(--color-ds-neutral-600);
+    --color-semantic-material-button-white-focus: var(--color-ds-neutral-500);
+    --color-semantic-material-button-white-disable: #28323c;
+
+    /* 피그마 컬러 시맨틱 Label White Dark */
+    --color-semantic-material-label-white-strong: var(
+      --color-ds-primary-static-black
+    );
+    --color-semantic-material-label-white-normal: var(--color-ds-primary-black);
+    --color-semantic-material-label-white-neutral: var(--color-ds-neutral-600);
+    --color-semantic-material-label-white-assistive: var(
+      --color-ds-neutral-400
+    );
     --color-semantic-material-label-white-disabled: var(
       --color-ds-material-label-white-disabled-dark
     );
 
-    /* 피그마 컬러 시맨틱 Material Label Black */
+    /* 피그마 컬러 시맨틱 Material Label Black Dark */
+    --color-semantic-material-label-black-strong: var(
+      --color-ds-primary-static-white
+    );
+    --color-semantic-material-label-black-normal: var(--color-ds-primary-white);
+    --color-semantic-material-label-black-neutral: var(--color-ds-neutral-400);
+    --color-semantic-material-label-black-assistive: var(
+      --color-ds-neutral-500
+    );
     --color-semantic-material-label-black-disabled: var(
       --color-ds-material-label-black-disabled-dark
     );
-  }
 
-  /* Shadcn UI 필수 기본 스타일 */
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
+    /* 피그마 컬러 시맨틱 Material Border Dark */
+    --color-semantic-material-border-weak: var(--color-ds-neutral-700);
+    --color-semantic-material-border-normal: var(--color-ds-neutral-600);
+    --color-semantic-material-border-strong: var(--color-ds-neutral-500);
+    --color-semantic-material-border-focused: var(--color-ds-neutral-500);
   }
 }

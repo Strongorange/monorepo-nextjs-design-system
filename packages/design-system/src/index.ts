@@ -10,8 +10,9 @@ export type {
 export { DsButton } from "./components/ui/ds-button";
 export type {
   DsButtonProps,
-  DsButtonVariant,
   DsButtonSize,
+  DsButtonIntent,
+  DsButtonAppearance,
 } from "./components/ui/ds-button";
 
 // Card Components

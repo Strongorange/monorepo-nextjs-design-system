@@ -5,12 +5,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
 const dsButtonVariants = cva(
-  "font-pretendard focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive box-border inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+  "font-pretendard focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 box-border inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       appearance: {
         fill: "",
-        outline: "border bg-transparent",
+        outline: "bg-material-button-white border focus:font-bold",
         text: "rounded-md bg-transparent px-0 py-1",
       },
       intent: {
@@ -49,13 +49,13 @@ const dsButtonVariants = cva(
         appearance: "outline",
         intent: "primary",
         className:
-          "hover:bg-[var(--color-semantic-material-button-brand-default)]/5 border-[var(--color-semantic-material-button-brand-default)] text-[var(--color-semantic-material-button-brand-default)] disabled:border-[var(--color-ds-neutral-300)] disabled:text-[var(--color-semantic-material-label-black-disabled)]",
+          "text-brand-primary-normal disabled:text-material-label-black-disabled disabled:border-material-border-normal border-brand-primary-normal focus:bg-brand-primary-normal focus:text-material-label-white-normal",
       },
       {
         appearance: "outline",
         intent: "secondary",
         className:
-          "border-[var(--color-ds-neutral-300)] text-[var(--color-ds-neutral-800)] hover:bg-[var(--color-ds-neutral-100)] disabled:text-[var(--color-semantic-material-label-black-disabled)]",
+          "border-material-border-normal text-material-label-black-strong disabled:text-material-label-black-disabled focus:border-material-border-focused",
       },
       {
         appearance: "outline",
@@ -63,7 +63,6 @@ const dsButtonVariants = cva(
         className:
           "rounded-[32px] border-[var(--color-ds-neutral-300)] text-[var(--color-ds-neutral-800)] hover:bg-[var(--color-ds-neutral-100)] disabled:text-[var(--color-semantic-material-label-black-disabled)]",
       },
-
       // Text 버튼
       {
         appearance: "text",
