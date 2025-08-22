@@ -152,8 +152,7 @@
     --color-semantic-material-button-brand-default: var(--color-ds-blue-500);
     --color-semantic-material-button-brand-hover: var(--color-ds-blue-600);
     --color-semantic-material-button-brand-focus: var(--color-ds-blue-700);
-    /* #F7F8F9 · 30% 로 아래 색 변경 */
-    --color-semantic-material-button-brand-disable: var(--color-ds-blue-500);
+    --color-semantic-material-button-brand-disable: oklch(0.97 0.01 180 / 0.3);
   }
 
   .dark {
@@ -206,6 +205,14 @@
     --border: #3d4044;
     --input: #3d4044;
     --ring: #4d9cfe;
+
+    /* 피그마 디자인 토큰 컬러 시맨틱 Dark */
+    --color-semantic-material-button-brand-default: var(--color-ds-blue-400);
+    --color-semantic-material-button-brand-hover: var(--color-ds-blue-500);
+    --color-semantic-material-button-brand-focus: var(--color-ds-blue-600);
+    --color-semantic-material-button-brand-disable: oklch(
+      0.3121 0.0226 248.56 / 0.3
+    );
   }
 
   /* Shadcn UI 필수 기본 스타일 */

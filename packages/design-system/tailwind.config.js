@@ -54,7 +54,12 @@ const designSystemConfig = {
 
         material: {
           button: {
-            brand: "#ff5c00",
+            brand: {
+              DEFAULT: "var(--color-semantic-material-button-brand-default)",
+              hover: "var(--color-semantic-material-button-brand-hover)",
+              focus: "var(--color-semantic-material-button-brand-focus)",
+              disable: "var(--color-semantic-material-button-brand-disable)",
+            },
             black: "#000000",
             white: "#ffffff",
           },
