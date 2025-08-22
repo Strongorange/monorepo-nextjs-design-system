@@ -43,7 +43,23 @@
 
   --radius-ds: 0.5rem;
 
+  /* 피그마 디자인 토큰 상태(없음 임시로 이름 지음) 색상 토큰 */
+  --color-ds-state-disabled-light: #f7f8f9; /* #F7F8F9 · 30% */ /* oklch( 0.9787 0.0017 247.84 / 0.3) */
+  --color-ds-state-disabled-dark: #28323c; /*#28323C · 30% */ /* oklch( 0.3121 0.0226 248.56 / 0.3) */
+
+  --color-ds-material-label-black-disabled-light: oklch(0.2809 0 0 / 0.15);
+  --color-ds-material-label-black-disabled-dark: oklch(0.997 0 0 / 0.5);
+  --color-ds-material-label-white-disabled-light: oklch(0.997 0 0 / 0.5);
+  --color-ds-material-label-white-disabled-dark: oklch(0.2809 0 0 / 0.5);
+
+  /* 피그마 디자인 토큰 컬러 스케일 static */
+  --color-ds-static-white: #ffffff;
+  --color-ds-white: #fefefe;
+  --color-ds-black: #292929;
+  --color-ds-static-black: #000000;
+
   /* 피그마 디자인 토큰 컬러 스케일 blue */
+  --color-ds-blue: #0172fe;
   --color-ds-blue-50: #f2f8ff;
   --color-ds-blue-100: #e6f1ff;
   --color-ds-blue-200: #c0dcff;
@@ -56,16 +72,16 @@
   --color-ds-blue-900: #000033;
 
   /* 피그마 디자인 토큰 컬러 스케일 neutral */
-  --neutral-50: #fefefe;
-  --neutral-100: #fbfcfd;
-  --neutral-200: #f7f8f9;
-  --neutral-300: #e9ebee;
-  --neutral-400: #c5c8ce;
-  --neutral-500: #7d8084;
-  --neutral-600: #53585c;
-  --neutral-700: #3d4044;
-  --neutral-800: #1e2022;
-  --neutral-900: #141515;
+  --color-ds-neutral-50: #fefefe;
+  --color-ds-neutral-100: #fbfcfd;
+  --color-ds-neutral-200: #f7f8f9;
+  --color-ds-neutral-300: #e9ebee;
+  --color-ds-neutral-400: #c5c8ce;
+  --color-ds-neutral-500: #7d8084;
+  --color-ds-neutral-600: #53585c;
+  --color-ds-neutral-700: #3d4044;
+  --color-ds-neutral-800: #1e2022;
+  --color-ds-neutral-900: #141515;
 }
 
 /**
@@ -144,15 +160,36 @@
     --ring: var(--color-ds-ring);
     --radius: var(--radius-ds);
 
-    /* 피그마 디자인 토큰 */
-    --neutral-50: var(--neutral-50);
-    --neutral-900: var(--neutral-900);
+    /* 피그마 컬러 시맨틱 Fill */
+    --color-semantic-fill-weak: var(--color-ds-neutral-100);
+    --color-semantic-fill-normal: var(--color-ds-neutral-200);
+    --color-semantic-fill-strong: var(--color-ds-neutral-300);
+    --color-semantic-fill-deep: var(--color-ds-neutral-400);
 
-    /* 피그마 디자인 토큰 컬러 시맨틱 Light */
+    /* 피그마 컬러 시맨틱 Material Label White */
+    --color-semantic-material-label-white-strong: var(--color-ds-static-white);
+    --color-semantic-material-label-white-disabled: var(
+      --color-ds-material-label-white-disabled-light
+    );
+
+    /* 피그마 컬러 시맨틱 Material Label Black */
+    --color-semantic-material-label-black-disabled: var(
+      --color-ds-material-label-black-disabled-light
+    );
+
+    /* 피그마 컬러 시맨틱 Material Button Brand Light */
     --color-semantic-material-button-brand-default: var(--color-ds-blue-500);
     --color-semantic-material-button-brand-hover: var(--color-ds-blue-600);
     --color-semantic-material-button-brand-focus: var(--color-ds-blue-700);
-    --color-semantic-material-button-brand-disable: oklch(0.97 0.01 180 / 0.3);
+    --color-semantic-material-button-brand-disable: var(
+      --color-ds-state-disabled-light
+    );
+
+    /* 피그마 컬러 시맨틱 Material Button Black Light */
+    --color-semantic-material-button-black-default: var(--color-ds-neutral-900);
+    --color-semantic-material-button-black-hover: var(--color-ds-neutral-700);
+    --color-semantic-material-button-black-focus: var(--color-ds-neutral-500);
+    --color-semantic-material-button-black-disable: #f7f8f9;
   }
 
   .dark {
@@ -206,12 +243,35 @@
     --input: #3d4044;
     --ring: #4d9cfe;
 
-    /* 피그마 디자인 토큰 컬러 시맨틱 Dark */
+    /* 피그마 컬러 시맨틱 Fill */
+    --color-semantic-fill-weak: var(--color-ds-neutral-800);
+    --color-semantic-fill-normal: var(--color-ds-neutral-700);
+    --color-semantic-fill-strong: var(--color-ds-neutral-600);
+    --color-semantic-fill-deep: var(--color-ds-neutral-500);
+
+    /* 피그마 컬러 시맨틱 Material Button Brand Dark */
     --color-semantic-material-button-brand-default: var(--color-ds-blue-400);
     --color-semantic-material-button-brand-hover: var(--color-ds-blue-500);
     --color-semantic-material-button-brand-focus: var(--color-ds-blue-600);
-    --color-semantic-material-button-brand-disable: oklch(
-      0.3121 0.0226 248.56 / 0.3
+    --color-semantic-material-button-brand-disable: var(
+      --color-ds-state-disabled-dark
+    );
+
+    /* 피그마 컬러 시맨틱 Material Button Black Dark */
+    --color-semantic-material-button-black-default: var(--color-ds-neutral-50);
+    --color-semantic-material-button-black-hover: var(--color-ds-neutral-200);
+    --color-semantic-material-button-black-focus: var(--color-ds-neutral-400);
+    --color-semantic-material-button-black-disable: #28323c;
+
+    /* 피그마 컬러 시맨틱 Label White */
+    --color-semantic-material-label-white-strong: var(--color-ds-static-black);
+    --color-semantic-material-label-white-disabled: var(
+      --color-ds-material-label-white-disabled-dark
+    );
+
+    /* 피그마 컬러 시맨틱 Material Label Black */
+    --color-semantic-material-label-black-disabled: var(
+      --color-ds-material-label-black-disabled-dark
     );
   }
 

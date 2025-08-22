@@ -20,6 +20,9 @@ importers:
       '@strongorange/ds-ui':
         specifier: workspace:*
         version: link:../../packages/design-system
+      lucide-react:
+        specifier: ^0.540.0
+        version: 0.540.0(react@19.1.0)
       next:
         specifier: 15.4.6
         version: 15.4.6(@opentelemetry/api@1.9.0)(@playwright/test@1.54.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -69,6 +72,9 @@ importers:
       '@strongorange/ds-ui':
         specifier: workspace:*
         version: link:../../packages/design-system
+      lucide-react:
+        specifier: ^0.540.0
+        version: 0.540.0(react@18.3.1)
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -7076,6 +7082,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-react@0.540.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
 
   lucide-react@0.540.0(react@19.1.0):
     dependencies:

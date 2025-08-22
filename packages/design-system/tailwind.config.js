@@ -46,13 +46,23 @@ const designSystemConfig = {
           foreground: "var(--ds-foreground)",
         },
 
-        /* 피그마 디자인 컬러 스케일 */
-        neutral: {
-          50: "var(--neutral-50)",
-          900: "var(--neutral-900)",
-        },
-
+        /* 피그마 컬러 시맨틱 Material */
         material: {
+          label: {
+            black: {
+              disabled: "var(--color-semantic-material-label-black-disabled)",
+            },
+            white: {
+              strong: "var(--color-semantic-material-label-white-strong)",
+              disabled: "var(--color-semantic-material-label-white-disabled)",
+            },
+          },
+          fill: {
+            weak: "var(--color-semantic-fill-weak)",
+            normal: "var(--color-semantic-fill-normal)",
+            strong: "var(--color-semantic-fill-strong)",
+            deep: "var(--color-semantic-fill-deep)",
+          },
           button: {
             brand: {
               DEFAULT: "var(--color-semantic-material-button-brand-default)",
@@ -60,7 +70,12 @@ const designSystemConfig = {
               focus: "var(--color-semantic-material-button-brand-focus)",
               disable: "var(--color-semantic-material-button-brand-disable)",
             },
-            black: "#000000",
+            black: {
+              DEFAULT: "var(--color-semantic-material-button-black-default)",
+              hover: "var(--color-semantic-material-button-black-hover)",
+              focus: "var(--color-semantic-material-button-black-focus)",
+              disable: "var(--color-semantic-material-button-black-disable)",
+            },
             white: "#ffffff",
           },
         },
