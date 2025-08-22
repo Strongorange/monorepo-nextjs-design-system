@@ -11,7 +11,11 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-    variant: {
+    appearance: {
+      control: { type: "select" },
+      options: ["fill", "outline", "text"],
+    },
+    intent: {
       control: { type: "select" },
       options: ["primary", "secondary", "assistive"],
     },
@@ -31,77 +35,98 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const FillPrimary: Story = {
   args: {
-    variant: "primary",
+    appearance: "fill",
+    intent: "primary",
     children: "DsButton",
     disabled: false,
   },
 };
 
-export const Secondary: Story = {
+export const FillAssistive: Story = {
   args: {
-    variant: "secondary",
+    appearance: "fill",
+    intent: "assistive",
     children: "DsButton",
     disabled: false,
   },
 };
 
-export const Assistive: Story = {
+export const OutlinePrimary: Story = {
   args: {
-    variant: "assistive",
-    children: "DsButton",
+    appearance: "outline",
+    intent: "primary",
+    children: "Outline Primary",
     disabled: false,
+  },
+};
+
+export const OutlineSecondary: Story = {
+  args: {
+    appearance: "outline",
+    intent: "secondary",
+    children: "Outline Secondary",
+  },
+};
+
+export const TextPrimary: Story = {
+  args: {
+    appearance: "text",
+    intent: "primary",
+    children: "Text Button",
   },
 };
 
 export const Small: Story = {
   args: {
-    variant: "primary",
+    appearance: "fill",
+    intent: "primary",
     size: "small",
-    children: "DsButton",
-    disabled: false,
+    children: "Small",
   },
 };
 
 export const Medium: Story = {
   args: {
-    variant: "primary",
+    appearance: "fill",
+    intent: "primary",
     size: "medium",
-    children: "DsButton",
-    disabled: false,
+    children: "Medium",
   },
 };
 
 export const Large: Story = {
   args: {
-    variant: "primary",
+    appearance: "fill",
+    intent: "primary",
     size: "large",
-    children: "DsButton",
-    disabled: false,
+    children: "Large",
   },
 };
 
 export const XLarge: Story = {
   args: {
-    variant: "primary",
+    appearance: "fill",
+    intent: "primary",
     size: "xlarge",
-    children: "DsButton",
-    disabled: false,
+    children: "XLarge",
   },
 };
 
 export const Disabled: Story = {
   args: {
-    variant: "primary",
-    children: "DsButton",
+    appearance: "fill",
+    intent: "primary",
+    children: "Disabled",
     disabled: true,
   },
 };
 
-export const WithIcon: Story = {
+export const OutlinePrimaryWithIcon: Story = {
   args: {
-    variant: "primary",
+    appearance: "outline",
+    intent: "primary",
     children: (
       <>
         <Mail className="mr-2 size-4" />
@@ -110,4 +135,3 @@ export const WithIcon: Story = {
     ),
   },
 };
-

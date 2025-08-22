@@ -8,13 +8,15 @@ const dsButtonVariants = cva(
   "font-pretendard focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive box-border inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
-      variant: {
-        primary:
-          "bg-material-button-brand text-material-label-white-strong shadow-xs hover:bg-material-button-brand-hover disabled:bg-material-button-brand-disable disabled:text-material-label-black-disabled disabled:hover:bg-material-button-brand-disable/30",
-        assistive:
-          "bg-material-button-black text-material-label-white-strong shadow-xs hover:bg-material-button-black-hover disabled:bg-material-button-black-disable disabled:text-material-label-black-disabled disabled:hover:bg-material-button-black-disable/30",
-        secondary:
-          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
+      appearance: {
+        fill: "",
+        outline: "border bg-transparent",
+        text: "rounded-md bg-transparent px-0 py-1",
+      },
+      intent: {
+        primary: "",
+        assistive: "",
+        secondary: "",
       },
       size: {
         small: "px-small h-[32px] py-0",
@@ -27,16 +29,60 @@ const dsButtonVariants = cva(
         false: "w-fit",
       },
     },
+    // 여러 Variant의 조합일때 정용될 스타일 정의
+    compoundVariants: [
+      // Fill 버튼
+      {
+        appearance: "fill",
+        intent: "primary",
+        className:
+          "bg-material-button-brand text-material-label-white-strong shadow-xs hover:bg-material-button-brand-hover disabled:bg-material-button-brand-disable disabled:text-material-label-black-disabled disabled:hover:bg-material-button-brand-disable/30",
+      },
+      {
+        appearance: "fill",
+        intent: "assistive",
+        className:
+          "bg-material-button-black text-material-label-white-strong shadow-xs hover:bg-material-button-black-hover disabled:bg-material-button-black-disable disabled:text-material-label-black-disabled disabled:hover:bg-material-button-black-disable/30",
+      },
+      // Outline 버튼
+      {
+        appearance: "outline",
+        intent: "primary",
+        className:
+          "hover:bg-[var(--color-semantic-material-button-brand-default)]/5 border-[var(--color-semantic-material-button-brand-default)] text-[var(--color-semantic-material-button-brand-default)] disabled:border-[var(--color-ds-neutral-300)] disabled:text-[var(--color-semantic-material-label-black-disabled)]",
+      },
+      {
+        appearance: "outline",
+        intent: "secondary",
+        className:
+          "border-[var(--color-ds-neutral-300)] text-[var(--color-ds-neutral-800)] hover:bg-[var(--color-ds-neutral-100)] disabled:text-[var(--color-semantic-material-label-black-disabled)]",
+      },
+      {
+        appearance: "outline",
+        intent: "assistive",
+        className:
+          "rounded-[32px] border-[var(--color-ds-neutral-300)] text-[var(--color-ds-neutral-800)] hover:bg-[var(--color-ds-neutral-100)] disabled:text-[var(--color-semantic-material-label-black-disabled)]",
+      },
+
+      // Text 버튼
+      {
+        appearance: "text",
+        intent: "primary",
+        className:
+          "hover:bg-muted focus:bg-muted text-[var(--color-ds-neutral-800)]",
+      },
+    ],
     defaultVariants: {
-      variant: "primary",
+      appearance: "fill",
+      intent: "primary",
       size: "medium",
       fullWidth: false,
     },
   }
 );
 
-export type DsButtonVariant = "primary" | "secondary" | "assistive";
-
+export type DsButtonAppearance = "fill" | "outline" | "text";
+export type DsButtonIntent = "primary" | "secondary" | "assistive";
 export type DsButtonSize = "medium" | "small" | "large" | "xlarge";
 
 export type DsButtonVariantProps = VariantProps<typeof dsButtonVariants>;
@@ -44,14 +90,23 @@ export type DsButtonVariantProps = VariantProps<typeof dsButtonVariants>;
 export interface DsButtonProps
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "size"> {
   asChild?: boolean;
-  variant?: DsButtonVariant;
+  appearance?: DsButtonAppearance;
+  intent?: DsButtonIntent;
   size?: DsButtonSize;
   fullWidth?: boolean;
 }
 
 const DsButton = React.forwardRef<HTMLButtonElement, DsButtonProps>(
   (
-    { className, variant, size, asChild = false, fullWidth = false, ...props },
+    {
+      className,
+      appearance = "fill",
+      intent = "primary",
+      size,
+      asChild = false,
+      fullWidth = false,
+      ...props
+    },
     ref
   ) => {
     const Comp = asChild ? Slot : "button";
@@ -60,7 +115,13 @@ const DsButton = React.forwardRef<HTMLButtonElement, DsButtonProps>(
       <Comp
         data-slot="button"
         className={cn(
-          dsButtonVariants({ variant, size, className, fullWidth })
+          dsButtonVariants({
+            appearance,
+            intent,
+            size,
+            className,
+            fullWidth,
+          })
         )}
         ref={ref}
         {...props}
