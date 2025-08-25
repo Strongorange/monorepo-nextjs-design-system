@@ -12,37 +12,6 @@
 빌드 타임에 이 값들이 Tailwind 클래스로 변환되어 런타임에 적용됨
 */
 @theme {
-  /* Design System Colors */
-  --color-ds-background: #fefefe; /* neutral/50 */
-  --color-ds-foreground: #1e2022; /* neutral/800 */
-  --color-ds-card: #ffffff;
-  --color-ds-popover: #ffffff;
-
-  --color-ds-primary: #0172fe; /* blue/500 */
-  --color-ds-primary-hover: #0167e5; /* blue/600 */
-  --color-ds-primary-active: #014498; /* blue/700 */
-  --color-ds-primary-foreground: #ffffff;
-
-  --color-ds-secondary: #fbfcfd; /* neutral/100 */
-  --color-ds-secondary-hover: #f7f8f9; /* neutral/200 */
-  --color-ds-secondary-foreground: #1e2022;
-
-  --color-ds-muted: #f7f8f9; /* neutral/200 */
-  --color-ds-muted-foreground: #53585c; /* neutral/600 */
-
-  --color-ds-accent: #a670eb; /* purple/500 */
-  --color-ds-accent-foreground: #ffffff;
-
-  --color-ds-destructive: #f83b68; /* pink/500 */
-  --color-ds-destructive-hover: #fe5b7e; /* pink/400 */
-  --color-ds-destructive-foreground: #ffffff;
-
-  --color-ds-border: #e9ebee; /* neutral/300 */
-  --color-ds-input: #e9ebee;
-  --color-ds-ring: #4d9cfe; /* blue/400 */
-
-  --radius-ds: 0.5rem;
-
   /* 피그마 사이즈 토큰 */
   /* Breakpoint (viewport)  */
   --breakpoint-*: initial;
@@ -70,6 +39,11 @@
   --radius-xlarge-desktop: 32px;
   --radius-xlarge-tablet: 32px;
   --radius-xlarge-mobile: 32px;
+
+  /* font size */
+  --text-caption-1-desktop: 11px;
+  --text-caption-1-tablet: 11px;
+  --text-caption-1-mobile: 11px;
 
   /* 피그마 디자인 토큰 상태(없음 임시로 이름 지음) 색상 토큰 */
   --color-ds-state-disabled-light: #f7f8f9; /* #F7F8F9 · 30% */ /* oklch( 0.9787 0.0017 247.84 / 0.3) */
