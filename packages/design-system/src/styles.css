@@ -43,6 +43,34 @@
 
   --radius-ds: 0.5rem;
 
+  /* 피그마 사이즈 토큰 */
+  /* Breakpoint (viewport)  */
+  --breakpoint-*: initial;
+  --breakpoint-desktop: 1280px;
+  --breakpoint-tablet: 960px;
+  --breakpoint-mobile: 430px;
+
+  /* Radius */
+  --radius-xsmall-desktop: 4px;
+  --radius-xsmall-tablet: 8px;
+  --radius-xsmall-mobile: 8px;
+
+  --radius-small-desktop: 8px;
+  --radius-small-tablet: 8px;
+  --radius-small-mobile: 8px;
+
+  --radius-medium-desktop: 12px;
+  --radius-medium-tablet: 12px;
+  --radius-medium-mobile: 12px;
+
+  --radius-large-desktop: 16px;
+  --radius-large-tablet: 16px;
+  --radius-large-mobile: 16px;
+
+  --radius-xlarge-desktop: 32px;
+  --radius-xlarge-tablet: 32px;
+  --radius-xlarge-mobile: 32px;
+
   /* 피그마 디자인 토큰 상태(없음 임시로 이름 지음) 색상 토큰 */
   --color-ds-state-disabled-light: #f7f8f9; /* #F7F8F9 · 30% */ /* oklch( 0.9787 0.0017 247.84 / 0.3) */
   --color-ds-state-disabled-dark: #28323c; /*#28323C · 30% */ /* oklch( 0.3121 0.0226 248.56 / 0.3) */

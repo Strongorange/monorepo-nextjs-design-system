@@ -19,10 +19,10 @@ const dsButtonVariants = cva(
         secondary: "",
       },
       size: {
-        small: "px-small h-[32px] py-0",
-        medium: "px-small h-[40px] py-0",
-        large: "px-medium h-[48px] py-0",
-        xlarge: "px-large h-[56px] py-0",
+        small: "px-small h-[32px] py-0 font-semibold",
+        medium: "px-small h-[40px] py-0 font-bold",
+        large: "px-medium h-[48px] py-0 font-bold",
+        xlarge: "px-large h-[56px] py-0 font-bold",
       },
       fullWidth: {
         true: "flex w-full",
@@ -60,8 +60,9 @@ const dsButtonVariants = cva(
       {
         appearance: "outline",
         intent: "assistive",
+        // TODO: 여기 딱 바꿔야함, Text  Focus 상태에서
         className:
-          "rounded-[32px] border-[var(--color-ds-neutral-300)] text-[var(--color-ds-neutral-800)] hover:bg-[var(--color-ds-neutral-100)] disabled:text-[var(--color-semantic-material-label-black-disabled)]",
+          "focus:bg-material-button-black text-material-label-black-strong rounded-xlarge-mobile border-material-border-normal hover:border-material-border-focused disabled:text-material-label-black-disabled",
       },
       // Text 버튼
       {

@@ -70,6 +70,14 @@ export const OutlineSecondary: Story = {
   },
 };
 
+export const OutlineAssistive: Story = {
+  args: {
+    appearance: "outline",
+    intent: "assistive",
+    children: "Outline Assistive",
+  },
+};
+
 export const TextPrimary: Story = {
   args: {
     appearance: "text",
