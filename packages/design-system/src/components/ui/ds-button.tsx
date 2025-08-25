@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
 const dsButtonVariants = cva(
-  "font-pretendard rounded-small-desktop box-border inline-flex shrink-0 cursor-pointer items-center justify-center whitespace-nowrap text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+  "font-pretendard rounded-small-desktop box-border inline-flex shrink-0 cursor-pointer items-center justify-center whitespace-nowrap font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       appearance: {
@@ -19,10 +19,10 @@ const dsButtonVariants = cva(
         secondary: "",
       },
       size: {
-        small: "px-small h-[32px] py-0 font-semibold",
-        medium: "px-small h-[40px] py-0 font-bold",
-        large: "px-medium h-[48px] py-0 font-bold",
-        xlarge: "px-large h-[56px] py-0 font-bold",
+        small: "ds-font-size-caption-1 px-small h-[32px] py-0 font-semibold",
+        medium: "px-small ds-font-size-body-2 h-[40px] py-0 font-bold",
+        large: "px-medium ds-font-size-body-1 h-[48px] py-0 font-bold",
+        xlarge: "px-large ds-font-size-body-1 h-[56px] py-0 font-bold",
       },
       fullWidth: {
         true: "flex w-full",
