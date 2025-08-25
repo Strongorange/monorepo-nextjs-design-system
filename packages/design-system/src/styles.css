@@ -81,6 +81,42 @@
   --color-ds-neutral-700: #3d4044;
   --color-ds-neutral-800: #1e2022;
   --color-ds-neutral-900: #141515;
+
+  --spacing-ds-gap-3x-large-desktop: 96px;
+  --spacing-ds-gap-3x-large-tablet: 96px;
+  --spacing-ds-gap-3x-large-mobile: 32px;
+
+  --spacing-ds-gap-2x-large-desktop: 64px;
+  --spacing-ds-gap-2x-large-tablet: 64px;
+  --spacing-ds-gap-2x-large-mobile: 32px;
+
+  --spacing-ds-gap-x-large-desktop: 32px;
+  --spacing-ds-gap-x-large-tablet: 32px;
+  --spacing-ds-gap-x-large-mobile: 32px;
+
+  --spacing-ds-gap-large-desktop: 24px;
+  --spacing-ds-gap-large-tablet: 24px;
+  --spacing-ds-gap-large-mobile: 24px;
+
+  --spacing-ds-gap-medium-desktop: 16px;
+  --spacing-ds-gap-medium-tablet: 16px;
+  --spacing-ds-gap-medium-mobile: 16px;
+
+  --spacing-ds-gap-small-desktop: 12px;
+  --spacing-ds-gap-small-tablet: 12px;
+  --spacing-ds-gap-small-mobile: 12px;
+
+  --spacing-ds-gap-xsmall-desktop: 10px;
+  --spacing-ds-gap-xsmall-tablet: 10px;
+  --spacing-ds-gap-xsmall-mobile: 10px;
+
+  --spacing-ds-gap-2x-small-desktop: 8px;
+  --spacing-ds-gap-2x-small-tablet: 8px;
+  --spacing-ds-gap-2x-small-mobile: 8px;
+
+  --spacing-ds-gap-3x-small-desktop: 4px;
+  --spacing-ds-gap-3x-small-tablet: 4px;
+  --spacing-ds-gap-3x-small-mobile: 4px;
 }
 
 /**
@@ -243,65 +279,110 @@
   =================================== */
 @utility ds-font-size-hero {
   /* mobile: 32px, tablet: 32px, desktop: 44px */
-  @apply desktop:text-[44px] text-[32px];
+  /* line-height: mobile: 40px, tablet: 40px, desktop: 54px */
+  @apply desktop:text-[44px] desktop:leading-[54px] text-[32px] leading-[40px];
 }
 @utility ds-font-size-heading-1 {
   /* mobile: 28px, tablet: 28px, desktop: 36px */
-  @apply desktop:text-[36px] text-[28px];
+  /* line-height: mobile: 36px, tablet: 36px, desktop: 46px */
+  @apply desktop:text-[36px] desktop:leading-[46px] text-[28px] leading-[36px];
 }
 @utility ds-font-size-heading-2 {
   /* mobile: 24px, tablet: 24px, desktop: 32px */
-  @apply desktop:text-[32px] text-[24px];
+  /* line-height: mobile: 34px, tablet: 34px, desktop: 40px */
+  @apply desktop:text-[32px] desktop:leading-[40px] text-[24px] leading-[34px];
 }
 @utility ds-font-size-heading-3 {
   /* mobile: 24px, tablet: 24px, desktop: 28px */
-  @apply desktop:text-[28px] text-[24px];
+  /* line-height: mobile: 34px, tablet: 34px, desktop: 36px */
+  @apply desktop:text-[28px] desktop:leading-[36px] text-[24px] leading-[34px];
 }
 @utility ds-font-size-heading-4 {
   /* mobile: 20px, tablet: 20px, desktop: 24px */
-  @apply desktop:text-[24px] text-[20px];
+  /* line-height: mobile: 30px, tablet: 30px, desktop: 34px */
+  @apply desktop:text-[24px] desktop:leading-[34px] text-[20px] leading-[30px];
 }
 @utility ds-font-size-heading-5 {
   /* mobile: 16px, tablet: 16px, desktop: 20px */
-  @apply desktop:text-[20px] text-[16px];
+  /* line-height: mobile: 30px, tablet: 26px, desktop: 30px */
+  @apply tablet:leading-[26px] desktop:text-[20px] desktop:leading-[30px] text-[16px] leading-[30px];
 }
 
 /* ===================================
-     UI & Headlines
-    =================================== */
+       UI & Headlines
+      =================================== */
 @utility ds-font-size-header-menu {
   /* mobile: 15px, tablet: 15px, desktop: 15px */
-  @apply text-[15px];
+  /* line-height: mobile: 24px, tablet: 24px, desktop: 24px */
+  @apply text-[15px] leading-[24px];
 }
 @utility ds-font-size-headline-1 {
   /* mobile: 16px, tablet: 16px, desktop: 20px */
-  @apply desktop:text-[20px] text-[16px];
+  /* line-height: mobile: 24px, tablet: 24px, desktop: 30px */
+  @apply desktop:text-[20px] desktop:leading-[30px] text-[16px] leading-[24px];
 }
 @utility ds-font-size-headline-2 {
   /* mobile: 16px, tablet: 16px, desktop: 18px */
-  @apply desktop:text-[18px] text-[16px];
+  /* line-height: mobile: 24px, tablet: 24px, desktop: 28px */
+  @apply desktop:text-[18px] desktop:leading-[28px] text-[16px] leading-[24px];
 }
 
 /* ===================================
-     Body & Captions
-    =================================== */
+       Body & Captions
+      =================================== */
 @utility ds-font-size-body-1 {
   /* mobile: 14px, tablet: 14px, desktop: 16px */
-  @apply desktop:text-[16px] text-[14px];
+  /* line-height: mobile: 22px, tablet: 22px, desktop: 24px */
+  @apply desktop:text-[16px] desktop:leading-[24px] text-[14px] leading-[22px];
 }
 @utility ds-font-size-body-2 {
   /* mobile: 14px, tablet: 14px, desktop: 14px */
-  @apply text-[14px];
+  /* line-height: mobile: 22px, tablet: 22px, desktop: 22px */
+  @apply text-[14px] leading-[22px];
 }
 @utility ds-font-size-caption-1 {
   /* mobile: 12px, tablet: 12px, desktop: 12px */
-  @apply text-[12px];
+  /* line-height: mobile: 18px, tablet: 18px, desktop: 18px */
+  @apply text-[12px] leading-[18px];
 }
 @utility ds-font-size-caption-2 {
   /* mobile: 11px, tablet: 11px, desktop: 11px */
-  @apply text-[11px];
+  /* line-height: mobile: 16px, tablet: 16px, desktop: 16px */
+  @apply text-[11px] leading-[16px];
 }
 @utility ds-font-size-caption-3 {
   /* mobile: 10px, tablet: 10px, desktop: 10px */
-  @apply text-[10px];
+  /* line-height: mobile: 16px, tablet: 16px, desktop: 16px */
+  @apply text-[10px] leading-[16px];
+}
+
+/* ===================================
+   Gap
+  =================================== */
+@utility ds-gap-3x-large {
+  @apply desktop:gap-ds-gap-3x-large-desktop gap-ds-gap-3x-large-mobile;
+}
+@utility ds-gap-2x-large {
+  @apply desktop:gap-ds-gap-2x-large-desktop gap-ds-gap-2x-large-mobile;
+}
+@utility ds-gap-x-large {
+  @apply desktop:gap-ds-gap-x-large-desktop gap-ds-gap-x-large-mobile;
+}
+@utility ds-gap-large {
+  @apply desktop:gap-ds-gap-large-desktop gap-ds-gap-large-mobile;
+}
+@utility ds-gap-medium {
+  @apply desktop:gap-ds-gap-medium-desktop gap-ds-gap-medium-mobile;
+}
+@utility ds-gap-small {
+  @apply desktop:gap-ds-gap-small-desktop gap-ds-gap-small-mobile;
+}
+@utility ds-gap-xsmall {
+  @apply desktop:gap-ds-gap-xsmall-desktop gap-ds-gap-xsmall-mobile;
+}
+@utility ds-gap-2x-small {
+  @apply desktop:gap-ds-gap-2x-small-desktop gap-ds-gap-2x-small-mobile;
+}
+@utility ds-gap-3x-small {
+  @apply desktop:gap-ds-gap-3x-small-desktop gap-ds-gap-3x-small-mobile;
 }

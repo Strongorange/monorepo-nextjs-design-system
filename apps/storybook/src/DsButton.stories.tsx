@@ -98,7 +98,7 @@ export const TextPrimary: Story = {
   args: {
     appearance: "text",
     intent: "primary",
-    children: "Text Button",
+    children: "Label",
   },
 };
 
@@ -153,9 +153,74 @@ export const OutlinePrimaryWithIcon: Story = {
     intent: "primary",
     children: (
       <>
-        <Mail className="mr-2 size-4" />
+        <Mail className="size-4" />
         <span>Login with Email</span>
       </>
     ),
+  },
+};
+
+// Text 버튼 상세 스토리 추가
+export const TextPrimaryWithLeftIcon: Story = {
+  args: {
+    appearance: "text",
+    intent: "primary",
+    children: (
+      <>
+        <Mail />
+        <span>Label</span>
+      </>
+    ),
+  },
+};
+
+export const TextPrimaryWithRightIcon: Story = {
+  args: {
+    appearance: "text",
+    intent: "primary",
+    children: (
+      <>
+        <span>Label</span>
+        <Mail />
+      </>
+    ),
+  },
+};
+
+export const TextPrimaryWithBothIcons: Story = {
+  args: {
+    appearance: "text",
+    intent: "primary",
+    children: (
+      <>
+        <Mail />
+        <span>Label</span>
+        <Mail />
+      </>
+    ),
+  },
+};
+
+export const TextPrimarySmall: Story = {
+  args: {
+    appearance: "text",
+    intent: "primary",
+    size: "small",
+    children: (
+      <>
+        <Mail />
+        <span>Label</span>
+        <Mail />
+      </>
+    ),
+  },
+};
+
+export const TextPrimaryDisabled: Story = {
+  args: {
+    appearance: "text",
+    intent: "primary",
+    children: "Label",
+    disabled: true,
   },
 };

@@ -11,7 +11,7 @@ const dsButtonVariants = cva(
       appearance: {
         fill: "",
         outline: "bg-material-button-white border focus:font-bold",
-        text: "rounded-md bg-transparent px-0 py-1",
+        text: "rounded-small-desktop hover:bg-material-fill-normal focus:bg-material-fill-normal bg-transparent px-0 py-1 hover:px-2 focus:px-2",
       },
       intent: {
         primary: "",
@@ -19,10 +19,14 @@ const dsButtonVariants = cva(
         secondary: "",
       },
       size: {
-        small: "ds-font-size-caption-1 px-small h-[32px] py-0 font-semibold",
-        medium: "px-small ds-font-size-body-2 h-[40px] py-0 font-bold",
-        large: "px-medium ds-font-size-body-1 h-[48px] py-0 font-bold",
-        xlarge: "px-large ds-font-size-body-1 h-[56px] py-0 font-bold",
+        small:
+          "ds-font-size-caption-1 px-small ds-gap-3x-small h-[32px] py-0 font-semibold",
+        medium:
+          "px-small ds-font-size-body-2 ds-gap-2x-small h-[40px] py-0 font-bold",
+        large:
+          "px-medium ds-font-size-body-1 ds-gap-xsmall h-[48px] py-0 font-bold",
+        xlarge:
+          "px-large ds-font-size-body-1 ds-gap-small h-[56px] py-0 font-bold",
       },
       fullWidth: {
         true: "flex w-full",
@@ -60,7 +64,6 @@ const dsButtonVariants = cva(
       {
         appearance: "outline",
         intent: "assistive",
-        // TODO: 여기 딱 바꿔야함, Text  Focus 상태에서
         className:
           "focus:bg-material-button-black text-material-label-black-strong rounded-xlarge-mobile border-material-border-normal hover:border-material-border-focused disabled:text-material-label-black-disabled",
       },
@@ -69,7 +72,18 @@ const dsButtonVariants = cva(
         appearance: "text",
         intent: "primary",
         className:
-          "hover:bg-muted focus:bg-muted text-[var(--color-ds-neutral-800)]",
+          "text-material-label-black-normal disabled:text-material-label-black-disabled gap-2 hover:bg-transparent focus:bg-transparent",
+      },
+      // Text 버튼 사이즈별 조정
+      {
+        appearance: "text",
+        size: "small",
+        className: "ds-font-size-body-2 ds-gap-3x-small [&_svg]:size-4",
+      },
+      {
+        appearance: "text",
+        size: "medium",
+        className: "ds-font-size-body-1 ds-gap-2x-small [&_svg]:size-5",
       },
     ],
     defaultVariants: {
