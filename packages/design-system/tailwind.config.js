@@ -3,6 +3,19 @@ const designSystemConfig = {
   theme: {
     extend: {
       colors: {
+        /* 피그마 컬러 시맨틱 Background */
+        background: {
+          normal: {
+            normal: "var(--color-semantic-background-normal-normal)",
+            alternative: "var(--color-semantic-background-normal-alternative)",
+          },
+          elevated: {
+            normal: "var(--color-semantic-background-elevated-normal)",
+            alternative:
+              "var(--color-semantic-background-elevated-alternative)",
+          },
+        },
+
         /* 피그마 컬러 시맨틱 Brand Primary */
         "brand-primary": {
           normal: "var(--color-semantic-brand-primary-normal)",

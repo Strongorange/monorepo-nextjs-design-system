@@ -142,6 +142,18 @@
 */
 @layer base {
   :root {
+    /* 피그마 컬러 시맨틱 Background */
+    --color-semantic-background-normal-normal: var(
+      --color-ds-primary-static-white
+    );
+    --color-semantic-background-normal-alternative: var(--color-ds-neutral-200);
+    --color-semantic-background-elevated-normal: var(
+      --color-ds-primary-static-white
+    );
+    --color-semantic-background-elevated-alternative: var(
+      --color-ds-neutral-300
+    );
+
     /* 피그마 컬러 시맨틱 Brand Primary Light */
     --color-semantic-brand-primary-normal: var(--color-ds-blue-500);
     --color-semantic-brand-primary-strong: var(--color-ds-blue-600);
@@ -208,6 +220,18 @@
   }
 
   .dark {
+    /* 피그마 컬러 시맨틱 Background */
+    --color-semantic-background-normal-normal: var(
+      --color-ds-primary-static-black
+    );
+    --color-semantic-background-normal-alternative: var(--color-ds-neutral-700);
+    --color-semantic-background-elevated-normal: var(
+      --color-ds-primary-static-black
+    );
+    --color-semantic-background-elevated-alternative: var(
+      --color-ds-neutral-700
+    );
+
     /* 피그마 컬러 시맨틱 Brand Primary Dark */
     --color-semantic-brand-primary-normal: var(--color-ds-blue-400);
     --color-semantic-brand-primary-strong: var(--color-ds-blue-500);

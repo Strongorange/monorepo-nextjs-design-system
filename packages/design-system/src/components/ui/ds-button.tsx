@@ -11,7 +11,9 @@ const dsButtonVariants = cva(
       appearance: {
         fill: "",
         outline: "bg-material-button-white border focus:font-bold",
-        text: "rounded-small-desktop hover:bg-material-fill-normal focus:bg-material-fill-normal bg-transparent px-0 py-1 hover:px-2 focus:px-2",
+        text: "rounded-small-desktop hover:bg-material-fill-normal focus:bg-background-normal-alternative bg-transparent px-0 py-1 hover:px-2 focus:px-2",
+        tabMenu:
+          "text-material-label-black-strong border-material-border-focused disabled:text-material-label-black-disabled disabled:border-material-border-normal rounded-bl-none rounded-br-none border border-b-2 border-l-0 border-r-0 border-t-0",
       },
       intent: {
         primary: "",
@@ -95,7 +97,7 @@ const dsButtonVariants = cva(
   }
 );
 
-export type DsButtonAppearance = "fill" | "outline" | "text";
+export type DsButtonAppearance = "fill" | "outline" | "text" | "tabMenu";
 export type DsButtonIntent = "primary" | "secondary" | "assistive";
 export type DsButtonSize = "medium" | "small" | "large" | "xlarge";
 

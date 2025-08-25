@@ -12,13 +12,12 @@ const meta = {
   decorators: [
     (Story) => (
       <div
+        id="width-container"
         style={{
           width: "400px",
-          backgroundColor: "var(--color-ds-neutral-400)",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "200px",
         }}
       >
         <Story />
@@ -222,5 +221,13 @@ export const TextPrimaryDisabled: Story = {
     intent: "primary",
     children: "Label",
     disabled: true,
+  },
+};
+
+export const TabMenu: Story = {
+  args: {
+    appearance: "tabMenu",
+    intent: "primary",
+    children: "Label",
   },
 };
