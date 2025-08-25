@@ -41,9 +41,6 @@
   --radius-xlarge-mobile: 32px;
 
   /* font size */
-  --text-caption-1-desktop: 11px;
-  --text-caption-1-tablet: 11px;
-  --text-caption-1-mobile: 11px;
 
   /* 피그마 디자인 토큰 상태(없음 임시로 이름 지음) 색상 토큰 */
   --color-ds-state-disabled-light: #f7f8f9; /* #F7F8F9 · 30% */ /* oklch( 0.9787 0.0017 247.84 / 0.3) */
@@ -109,59 +106,6 @@
 */
 @layer base {
   :root {
-    /* 기존 디자인 시스템 변수 유지 */
-    --ds-background: var(--color-ds-background);
-    --ds-foreground: var(--color-ds-foreground);
-    --ds-card: var(--color-ds-card);
-    --ds-popover: var(--color-ds-popover);
-
-    --ds-primary: var(--color-ds-primary);
-    --ds-primary-hover: var(--color-ds-primary-hover);
-    --ds-primary-active: var(--color-ds-primary-active);
-    --ds-primary-foreground: var(--color-ds-primary-foreground);
-
-    --ds-secondary: var(--color-ds-secondary);
-    --ds-secondary-hover: var(--color-ds-secondary-hover);
-    --ds-secondary-foreground: var(--color-ds-secondary-foreground);
-
-    --ds-muted: var(--color-ds-muted);
-    --ds-muted-foreground: var(--color-ds-muted-foreground);
-
-    --ds-accent: var(--color-ds-accent);
-    --ds-accent-foreground: var(--color-ds-accent-foreground);
-
-    --ds-destructive: var(--color-ds-destructive);
-    --ds-destructive-hover: var(--color-ds-destructive-hover);
-    --ds-destructive-foreground: var(--color-ds-destructive-foreground);
-
-    --ds-border: var(--color-ds-border);
-    --ds-input: var(--color-ds-input);
-    --ds-ring: var(--color-ds-ring);
-
-    --ds-radius: var(--radius-ds);
-
-    /* Shadcn UI 호환성을 위한 변수 매핑 */
-    --background: var(--color-ds-background);
-    --foreground: var(--color-ds-foreground);
-    --card: var(--color-ds-card);
-    --card-foreground: var(--color-ds-foreground);
-    --popover: var(--color-ds-popover);
-    --popover-foreground: var(--color-ds-foreground);
-    --primary: var(--color-ds-primary);
-    --primary-foreground: var(--color-ds-primary-foreground);
-    --secondary: var(--color-ds-secondary);
-    --secondary-foreground: var(--color-ds-secondary-foreground);
-    --muted: var(--color-ds-muted);
-    --muted-foreground: var(--color-ds-muted-foreground);
-    --accent: var(--color-ds-accent);
-    --accent-foreground: var(--color-ds-accent-foreground);
-    --destructive: var(--color-ds-destructive);
-    --destructive-foreground: var(--color-ds-destructive-foreground);
-    --border: var(--color-ds-border);
-    --input: var(--color-ds-input);
-    --ring: var(--color-ds-ring);
-    --radius: var(--radius-ds);
-
     /* 피그마 컬러 시맨틱 Brand Primary Light */
     --color-semantic-brand-primary-normal: var(--color-ds-blue-500);
     --color-semantic-brand-primary-strong: var(--color-ds-blue-600);
@@ -228,56 +172,6 @@
   }
 
   .dark {
-    /* 기존 디자인 시스템 다크모드 변수 유지 */
-    --ds-background: #1e2022;
-    --ds-foreground: #ffffff;
-    --ds-card: #1e2022;
-    --ds-popover: #1e2022;
-
-    --ds-primary: #0172fe;
-    --ds-primary-hover: #4d9cfe; /* lighter on dark */
-    --ds-primary-active: #0167e5;
-    --ds-primary-foreground: #ffffff;
-
-    --ds-secondary: #3d4044; /* neutral/700 */
-    --ds-secondary-hover: #53585c; /* neutral/600 */
-    --ds-secondary-foreground: #ffffff;
-
-    --ds-muted: #2e3236;
-    --ds-muted-foreground: #b3bac2;
-
-    --ds-accent: #977aec; /* purple/400 */
-    --ds-accent-foreground: #ffffff;
-
-    --ds-destructive: #f83b68;
-    --ds-destructive-hover: #fe5b7e;
-    --ds-destructive-foreground: #ffffff;
-
-    --ds-border: #3d4044;
-    --ds-input: #3d4044;
-    --ds-ring: #4d9cfe; /* blue/400 */
-
-    /* Shadcn UI 호환성을 위한 다크모드 변수 매핑 */
-    --background: #1e2022;
-    --foreground: #ffffff;
-    --card: #1e2022;
-    --card-foreground: #ffffff;
-    --popover: #1e2022;
-    --popover-foreground: #ffffff;
-    --primary: #0172fe;
-    --primary-foreground: #ffffff;
-    --secondary: #3d4044;
-    --secondary-foreground: #ffffff;
-    --muted: #2e3236;
-    --muted-foreground: #b3bac2;
-    --accent: #977aec;
-    --accent-foreground: #ffffff;
-    --destructive: #f83b68;
-    --destructive-foreground: #ffffff;
-    --border: #3d4044;
-    --input: #3d4044;
-    --ring: #4d9cfe;
-
     /* 피그마 컬러 시맨틱 Brand Primary Dark */
     --color-semantic-brand-primary-normal: var(--color-ds-blue-400);
     --color-semantic-brand-primary-strong: var(--color-ds-blue-500);
@@ -341,5 +235,75 @@
     --color-semantic-material-border-normal: var(--color-ds-neutral-600);
     --color-semantic-material-border-strong: var(--color-ds-neutral-500);
     --color-semantic-material-border-focused: var(--color-ds-neutral-500);
+  }
+}
+
+@layer components {
+  /* ===================================
+   Hero & Headings
+  =================================== */
+  .font-size-hero {
+    /* mobile: 32px, tablet: 32px, desktop: 44px */
+    @apply desktop:text-[44px] text-[32px];
+  }
+  .font-size-heading-1 {
+    /* mobile: 28px, tablet: 28px, desktop: 36px */
+    @apply desktop:text-[36px] text-[28px];
+  }
+  .font-size-heading-2 {
+    /* mobile: 24px, tablet: 24px, desktop: 32px */
+    @apply desktop:text-[32px] text-[24px];
+  }
+  .font-size-heading-3 {
+    /* mobile: 24px, tablet: 24px, desktop: 28px */
+    @apply desktop:text-[28px] text-[24px];
+  }
+  .font-size-heading-4 {
+    /* mobile: 20px, tablet: 20px, desktop: 24px */
+    @apply desktop:text-[24px] text-[20px];
+  }
+  .font-size-heading-5 {
+    /* mobile: 16px, tablet: 16px, desktop: 20px */
+    @apply desktop:text-[20px] text-[16px];
+  }
+
+  /* ===================================
+   UI & Headlines
+  =================================== */
+  .font-size-header-menu {
+    /* mobile: 15px, tablet: 15px, desktop: 15px */
+    @apply text-[15px];
+  }
+  .font-size-headline-1 {
+    /* mobile: 16px, tablet: 16px, desktop: 20px */
+    @apply desktop:text-[20px] text-[16px];
+  }
+  .font-size-headline-2 {
+    /* mobile: 16px, tablet: 16px, desktop: 18px */
+    @apply desktop:text-[18px] text-[16px];
+  }
+
+  /* ===================================
+   Body & Captions
+  =================================== */
+  .font-size-body-1 {
+    /* mobile: 14px, tablet: 14px, desktop: 16px */
+    @apply desktop:text-[16px] text-[14px];
+  }
+  .font-size-body-2 {
+    /* mobile: 14px, tablet: 14px, desktop: 14px */
+    @apply text-[14px];
+  }
+  .font-size-caption-1 {
+    /* mobile: 12px, tablet: 12px, desktop: 12px */
+    @apply text-[12px];
+  }
+  .font-size-caption-2 {
+    /* mobile: 11px, tablet: 11px, desktop: 11px */
+    @apply text-[11px];
+  }
+  .font-size-caption-3 {
+    /* mobile: 10px, tablet: 10px, desktop: 10px */
+    @apply text-[10px];
   }
 }
